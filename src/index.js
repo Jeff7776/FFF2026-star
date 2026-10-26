@@ -12,27 +12,25 @@ header{background:#062f50;color:white;padding:18px 6%;display:flex;align-items:c
 .brand{font-size:20px;font-weight:800;text-decoration:none}
 nav{display:flex;gap:15px;flex-wrap:wrap}
 nav a{color:white;text-decoration:none;font-size:14px}
-.hero-section{position:relative;overflow:hidden;background:#102f49}
+.hero-section{position:relative;overflow:hidden;background:#0e2e46}
 .hero-photo{position:relative;min-height:760px;display:flex;align-items:flex-end;overflow:hidden;background:#0d2d4c}
-.hero-photo::before{content:"";position:absolute;inset:0;background-image:url("https://raw.githubusercontent.com/Jeff7776/FFF2026-star/main/family_foreclosure_foundation_hero.jpg");background-size:cover;background-position:center center;filter:contrast(1.05) saturate(1.06);}
-.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(11,41,60,0.26) 0%, rgba(11,41,60,0.22) 34%, rgba(7,48,70,0.65) 100%);}
-.hero-title-wrap{position:absolute;left:50%;top:18px;transform:translateX(-50%);width:min(98%, 1800px);z-index:2;pointer-events:none}
-.hero-title{font-size:clamp(4.4rem, 8vw, 16rem);line-height:0.85;font-weight:900;letter-spacing:-0.07em;text-align:center;color:rgba(255,255,255,0.18);text-shadow:0 0 18px rgba(255,255,255,0.14);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.hero-banner{position:relative;z-index:2;width:100%;padding:20px 4% 18px;border-top:4px solid #d6b15d;background:linear-gradient(90deg, rgba(4,65,99,0.96), rgba(10,93,134,0.94));box-shadow:inset 0 0 0 2px rgba(255,255,255,0.14);display:grid;grid-template-columns:1.1fr 2.3fr 1.2fr;align-items:center;gap:18px;}
-.hero-banner::before,
-.hero-banner::after{content:"";position:absolute;left:0;right:0;pointer-events:none;}
-.hero-banner::before{top:-12px;height:18px;background:linear-gradient(90deg, transparent 0%, rgba(241,205,116,0.95) 18%, rgba(241,205,116,0.95) 82%, transparent 100%);opacity:1;}
-.hero-banner::after{bottom:0;height:18px;background:linear-gradient(90deg, rgba(255,255,255,0.0) 0%, rgba(255,255,255,0.0) 8%, rgba(255,255,255,0.12) 20%, rgba(255,255,255,0.12) 80%, rgba(255,255,255,0.0) 92%);} 
-.hero-badge{display:flex;align-items:center;gap:16px;justify-self:start;padding-left:12px;color:#f7f6f1;}
-.star-mark{width:92px;height:92px;display:grid;place-items:center;border:3px solid rgba(247, 208, 98, 0.8);border-radius:50%;background:rgba(12,40,59,.18);box-shadow:0 0 0 6px rgba(255,255,255,.04);position:relative;}
-.star-mark::before{content:"✦";display:block;color:#f6d677;font-size:2.1rem;line-height:1;transform:translateY(-2px);}
-.badge-copy{display:flex;flex-direction:column;line-height:1;align-items:flex-start;}
-.badge-copy .stars{font-size:1.05rem;letter-spacing:.2rem;color:#f7d778;margin-bottom:6px}
-.badge-copy .label{font-size:clamp(.9rem, 1vw, 1.2rem);font-weight:800;letter-spacing:.08em;display:block;}
-.badge-copy .year{font-size:clamp(2.4rem, 2.2vw, 3.6rem);font-weight:900;letter-spacing:-.08em;display:block;margin-top:12px;line-height:1;}
-.hero-headline{font-size:clamp(2.7rem, 4vw, 5.6rem);line-height:0.9;font-weight:900;text-align:center;color:#f6f4ef;letter-spacing:-.05em;margin:0;white-space:nowrap;}
-.hero-tagline{font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.5rem, 2vw, 3rem);line-height:1.1;font-style:italic;color:#f5c964;text-align:right;font-weight:700;letter-spacing:-.03em;text-shadow:0 0 18px rgba(245,201,100,.18);}
-.hero-tagline span{display:block;}
+.hero-photo::before{content:"";position:absolute;inset:0;background-image:url("https://raw.githubusercontent.com/Jeff7776/FFF2026-star/main/family_foreclosure_foundation_hero.jpg");background-size:cover;background-position:center center;filter:contrast(1.05) saturate(1.08)}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(7,33,48,0.18) 0%, rgba(7,33,48,0.20) 30%, rgba(7,33,48,0.62) 100%)}
+.hero-title-wrap{position:absolute;left:50%;top:12px;transform:translateX(-50%);width:100%;z-index:2;pointer-events:none}
+.hero-title{font-size:clamp(4.3rem, 8vw, 15rem);line-height:0.8;font-weight:900;letter-spacing:-0.08em;text-align:center;color:rgba(255,255,255,0.18);text-shadow:0 0 18px rgba(255,255,255,0.10);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-transform:uppercase}
+.hero-banner{position:relative;z-index:2;width:100%;padding:20px 4% 18px;background:linear-gradient(90deg, #0b4d76 0%, #0b5b8d 25%, #0e5d8e 50%, #0d4c78 75%, #0b3555 100%);border-top:4px solid #d6b15d;box-shadow:inset 0 0 0 2px rgba(255,255,255,0.12);display:grid;grid-template-columns:1.15fr 2.35fr 1.2fr;align-items:center;gap:18px;overflow:visible}
+.hero-banner::before{content:"";position:absolute;left:-3%;right:-3%;top:-24px;height:68px;background:linear-gradient(180deg, rgba(10,74,112,0.0) 0%, rgba(10,74,112,0.0) 15%, rgba(11,90,134,0.98) 100%);border-radius:50% 50% 0 0 / 100% 100% 0 0;box-shadow:0 -5px 0 rgba(214,177,93,0.8);}
+.hero-banner::after{content:"";position:absolute;left:0;right:0;bottom:0;height:16px;background:linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.16) 15%, rgba(255,255,255,0.16) 85%, rgba(255,255,255,0) 100%)}
+.hero-badge{display:flex;align-items:center;gap:16px;justify-self:start;padding-left:14px;color:#f6f4ef;position:relative;z-index:1}
+.star-mark{width:90px;height:90px;display:grid;place-items:center;border:3px solid rgba(246,212,107,0.9);border-radius:50%;background:rgba(8,35,52,0.18);box-shadow:0 0 0 7px rgba(255,255,255,0.04)}
+.star-mark::before{content:"✦";display:block;color:#f6d96a;font-size:2.1rem;line-height:1;transform:translateY(-2px)}
+.badge-copy{display:flex;flex-direction:column;line-height:1;align-items:flex-start}
+.badge-copy .stars{font-size:1rem;letter-spacing:.18rem;color:#f7d66d;margin-bottom:7px}
+.badge-copy .label{font-size:clamp(.8rem, 1vw, 1.12rem);font-weight:800;letter-spacing:.09em;display:block}
+.badge-copy .year{font-size:clamp(2.2rem, 2.6vw, 3.5rem);font-weight:900;letter-spacing:-.08em;display:block;margin-top:10px;line-height:1}
+.hero-headline{font-size:clamp(2.7rem, 4vw, 6rem);line-height:0.9;font-weight:900;text-align:center;color:#f7f7f3;letter-spacing:-.05em;margin:0;white-space:nowrap;position:relative;z-index:1}
+.hero-tagline{font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.45rem, 2vw, 3rem);line-height:1.05;font-style:italic;color:#f5c964;text-align:right;font-weight:700;letter-spacing:-.03em;text-shadow:0 0 16px rgba(245,201,100,.18);position:relative;z-index:1}
+.hero-tagline span{display:block}
 main{max-width:1150px;margin:auto;padding:45px 6%}
 section{margin-bottom:35px}
 h2{color:#062f50;font-size:30px;line-height:1.2}
@@ -45,17 +43,17 @@ footer a{color:white}
 .email{font-weight:bold}
 @media (max-width: 980px){
   .hero-photo{min-height:620px}
-  .hero-banner{grid-template-columns:1fr;gap:10px;padding-top:28px;padding-bottom:22px;text-align:center}
+  .hero-banner{grid-template-columns:1fr;gap:10px;padding-top:30px;padding-bottom:22px;text-align:center}
   .hero-badge{justify-self:center;padding-left:0}
-  .hero-tagline{font-size:clamp(1.5rem,4vw,2.4rem);text-align:center}
+  .hero-tagline{text-align:center}
   .hero-headline{white-space:normal}
 }
 @media (max-width: 760px){
-  .hero-title{font-size:clamp(2.7rem, 10vw, 6rem)}
+  .hero-title{font-size:clamp(2.8rem, 10vw, 6rem)}
   .hero-banner{padding-left:18px;padding-right:18px}
   .hero-badge{flex-direction:column;align-items:center}
   .badge-copy{align-items:center}
-  .hero-headline{font-size:clamp(2.1rem,8vw,3.5rem)}
+  .hero-headline{font-size:clamp(2.2rem,8vw,3.6rem)}
 }
 @media(max-width:600px){header{align-items:flex-start}.hero{padding:65px 6%}nav{gap:10px}}
 `;
