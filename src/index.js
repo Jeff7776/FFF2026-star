@@ -1,258 +1,285 @@
-
-const SITE_NAME = "The Family Foreclosure Foundation";
-const CONTACT_EMAIL = "Info@thefamilyforeclosurefoundation.org";
-const SITE_URL = "https://thefamilyforeclosurefoundation.org";
+const BRAND = "The Family Foreclosure Foundation";
+const EMAIL = "Info@TheFamilyForeclosureFoundation.Org";
+const SITE = "https://thefamilyforeclosurefoundation.org";
+const HERO = "https://raw.githubusercontent.com/Jeff7776/FFF2026-star/main/family_foreclosure_foundation_hero.jpg";
 
 const CSS = `
+:root{--navy:#062f50;--blue:#07588a;--gold:#f5bd32;--teal:#16a6b4;--ink:#18334a;--muted:#5c6f80;--cream:#f6f8fa;--border:#dce5ec}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#18334a;line-height:1.65}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.7}
 a{color:inherit}
-header{background:#062f50;color:white;padding:18px 6%;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
-.brand{font-size:20px;font-weight:800;text-decoration:none}
-nav{display:flex;gap:15px;flex-wrap:wrap}
-nav a{color:white;text-decoration:none;font-size:14px}
-.hero-section{position:relative;overflow:hidden;background:#0e2e46}
-.hero-photo{position:relative;min-height:760px;display:flex;align-items:flex-end;overflow:hidden;background:#0d2d4c}
-.hero-photo::before{content:"";position:absolute;inset:0;background-image:url("https://raw.githubusercontent.com/Jeff7776/FFF2026-star/main/family_foreclosure_foundation_hero.jpg");background-size:cover;background-position:center center;filter:contrast(1.05) saturate(1.08)}
-.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(7,33,48,0.18) 0%, rgba(7,33,48,0.20) 30%, rgba(7,33,48,0.62) 100%)}
-.hero-title-wrap{position:absolute;left:50%;top:12px;transform:translateX(-50%);width:100%;z-index:2;pointer-events:none}
-.hero-title{font-size:clamp(4.3rem, 8vw, 15rem);line-height:0.8;font-weight:900;letter-spacing:-0.08em;text-align:center;color:rgba(255,255,255,0.18);text-shadow:0 0 18px rgba(255,255,255,0.10);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-transform:uppercase}
-.hero-banner{position:relative;z-index:2;width:100%;padding:20px 4% 18px;background:linear-gradient(90deg, #0b4d76 0%, #0b5b8d 25%, #0e5d8e 50%, #0d4c78 75%, #0b3555 100%);border-top:4px solid #d6b15d;box-shadow:inset 0 0 0 2px rgba(255,255,255,0.12);display:grid;grid-template-columns:1.15fr 2.35fr 1.2fr;align-items:center;gap:18px;overflow:visible}
-.hero-banner::before{content:"";position:absolute;left:-3%;right:-3%;top:-24px;height:68px;background:linear-gradient(180deg, rgba(10,74,112,0.0) 0%, rgba(10,74,112,0.0) 15%, rgba(11,90,134,0.98) 100%);border-radius:50% 50% 0 0 / 100% 100% 0 0;box-shadow:0 -5px 0 rgba(214,177,93,0.8);}
-.hero-banner::after{content:"";position:absolute;left:0;right:0;bottom:0;height:16px;background:linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.16) 15%, rgba(255,255,255,0.16) 85%, rgba(255,255,255,0) 100%)}
-.hero-badge{display:flex;align-items:center;gap:16px;justify-self:start;padding-left:14px;color:#f6f4ef;position:relative;z-index:1}
-.star-mark{width:90px;height:90px;display:grid;place-items:center;border:3px solid rgba(246,212,107,0.9);border-radius:50%;background:rgba(8,35,52,0.18);box-shadow:0 0 0 7px rgba(255,255,255,0.04)}
-.star-mark::before{content:"✦";display:block;color:#f6d96a;font-size:2.1rem;line-height:1;transform:translateY(-2px)}
-.badge-copy{display:flex;flex-direction:column;line-height:1;align-items:flex-start}
-.badge-copy .stars{font-size:1rem;letter-spacing:.18rem;color:#f7d66d;margin-bottom:7px}
-.badge-copy .label{font-size:clamp(.8rem, 1vw, 1.12rem);font-weight:800;letter-spacing:.09em;display:block}
-.badge-copy .year{font-size:clamp(2.2rem, 2.6vw, 3.5rem);font-weight:900;letter-spacing:-.08em;display:block;margin-top:10px;line-height:1}
-.hero-headline{font-size:clamp(2.7rem, 4vw, 6rem);line-height:0.9;font-weight:900;text-align:center;color:#f7f7f3;letter-spacing:-.05em;margin:0;white-space:nowrap;position:relative;z-index:1}
-.hero-tagline{font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.45rem, 2vw, 3rem);line-height:1.05;font-style:italic;color:#f5c964;text-align:right;font-weight:700;letter-spacing:-.03em;text-shadow:0 0 16px rgba(245,201,100,.18);position:relative;z-index:1}
-.hero-tagline span{display:block}
-main{max-width:1150px;margin:auto;padding:45px 6%}
-section{margin-bottom:35px}
-h2{color:#062f50;font-size:30px;line-height:1.2}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
-.card{padding:24px;border:1px solid #dce5ec;border-radius:14px;box-shadow:0 8px 24px #062f5010;background:white}
-.card h3{color:#07588a;margin-top:0}
-.notice{background:#f6f8fa;border-left:4px solid #16a6b4;padding:18px}
-footer{background:#062f50;color:white;padding:30px 6%;text-align:center}
-footer a{color:white}
-.email{font-weight:bold}
-@media (max-width: 980px){
-  .hero-photo{min-height:620px}
-  .hero-banner{grid-template-columns:1fr;gap:10px;padding-top:30px;padding-bottom:22px;text-align:center}
-  .hero-badge{justify-self:center;padding-left:0}
-  .hero-tagline{text-align:center}
-  .hero-headline{white-space:normal}
-}
-@media (max-width: 760px){
-  .hero-title{font-size:clamp(2.8rem, 10vw, 6rem)}
-  .hero-banner{padding-left:18px;padding-right:18px}
-  .hero-badge{flex-direction:column;align-items:center}
-  .badge-copy{align-items:center}
-  .hero-headline{font-size:clamp(2.2rem,8vw,3.6rem)}
-}
-@media(max-width:600px){header{align-items:flex-start}.hero{padding:65px 6%}nav{gap:10px}}
+.header{padding:16px 5%;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;border-bottom:1px solid var(--border);background:#fff}
+.brand{font-weight:900;color:var(--navy);text-decoration:none;font-size:15px;letter-spacing:.04em}
+.brand small{display:block;color:#9b7519;font-size:10px;letter-spacing:.16em}
+nav{display:flex;flex-wrap:wrap;gap:5px}
+nav a{font-size:12px;font-weight:700;text-decoration:none;padding:8px;border-radius:5px;color:var(--navy)}
+nav a:hover{background:#eaf3f8}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center;padding:65px 6%;background:linear-gradient(135deg,#f2f7fa,#fff 70%)}
+.eyebrow{font-size:11px;font-weight:900;letter-spacing:.15em;color:#947016;text-transform:uppercase}
+h1,h2,h3{line-height:1.2;color:var(--navy)}
+h1{font-size:clamp(36px,5vw,61px);letter-spacing:-.04em;margin:16px 0}
+h2{font-size:clamp(27px,3vw,40px);letter-spacing:-.025em}
+h3{font-size:20px}
+.hero p,.intro{font-size:17px;color:var(--muted)}
+.hero-photo{position:relative;min-width:0}
+.hero-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border-radius:15px;box-shadow:0 18px 45px #062f5025;background:var(--navy)}
+.watermark{position:absolute;top:0;left:0;right:0;padding:12px;background:#062f5055;color:#fff;text-align:center;font-size:11px;font-weight:900;letter-spacing:.12em;text-shadow:0 1px 4px #000}
+.buttons{display:flex;flex-wrap:wrap;gap:12px;margin:25px 0}
+.btn{display:inline-block;padding:13px 19px;background:var(--navy);color:white;text-decoration:none;border-radius:6px;font-size:12px;font-weight:900;letter-spacing:.04em}
+.btn.gold{background:var(--gold);color:var(--navy)}
+.btn.outline{background:#fff;border:1px solid #c5d3de;color:var(--navy)}
+section.content{padding:55px 6%}
+.center{text-align:center}
+.section-heading{max-width:850px;margin:0 auto 32px;text-align:center}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.card{padding:25px;background:#fff;border:1px solid var(--border);border-radius:12px;box-shadow:0 7px 25px #062f500a}
+.card p{color:var(--muted)}
+.soft{background:var(--cream)}
+.callout{padding:48px 6%;text-align:center;background:var(--navy);color:white}
+.callout h2,.callout p{color:white}
+.page-hero{padding:55px 6%;background:linear-gradient(135deg,#eef5f8,#fff)}
+.page-hero h1{font-size:clamp(35px,4vw,52px)}
+.faq{padding:20px 0;border-bottom:1px solid var(--border)}
+.faq h3{margin-bottom:8px}
+.notice{background:#fff8e6;border-left:4px solid var(--gold);padding:18px;margin:25px 0}
+.form{max-width:850px;margin:auto}
+.form fieldset{border:1px solid var(--border);border-radius:10px;margin:25px 0;padding:24px}
+.form legend{color:var(--navy);font-weight:900;padding:0 8px}
+.field{margin:16px 0}
+.field label{display:block;font-weight:700;margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;padding:12px;border:1px solid #bdccd7;border-radius:5px;font:inherit}
+.field textarea{min-height:100px}
+.field .choice{display:block;font-weight:400;margin:7px 0}
+.field .choice input{width:auto;margin-right:8px}
+footer{background:#041f34;color:white;padding:38px 6%}
+footer h3,footer a{color:white}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr;gap:30px}
+footer p{color:#e0e9ef}
+footer a{overflow-wrap:anywhere}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding:35px 5%;gap:22px}.hero-photo{grid-row:1}.grid{grid-template-columns:1fr}.header{align-items:flex-start}.footer-grid{grid-template-columns:1fr}section.content{padding:38px 5%}nav a{padding:7px;font-size:11px}}
 `;
 
-const NAV = [
-  ["/", "Home"],
-  ["/programs.html", "Programs"],
-  ["/who-we-serve.html", "Who We Serve"],
-  ["/resources.html", "Resources"],
-  ["/about.html", "About"],
-  ["/asset-recovery.html", "Asset Recovery"],
-  ["/apply.html", "Apply"],
-  ["/contact.html", "Contact"]
-];
+const pages = {
+"/": ["A New Path Forward After Foreclosure", `
+<section class="hero">
+<div>
+<p class="eyebrow">Families Helping Families</p>
+<p class="intro">THE FAMILY FORECLOSURE FOUNDATION</p>
+<h1>A New Path Forward After Foreclosure</h1>
+<p>Because every family is somebody's whole entire world.</p>
+<p>We help bridge the gap between foreclosure and the possibility of returning to homeownership through family stabilization, community partnerships, practical resource navigation, and connections to appropriate resources.</p>
+<div class="buttons"><a class="btn gold" href="/apply.html">REQUEST ASSISTANCE</a><a class="btn outline" href="/programs.html">EXPLORE OUR PROGRAMS</a></div>
+<p><strong>Our focus is post-foreclosure support.</strong> We help families explore the next steps toward stability.</p>
+</div>
+<div class="hero-photo"><img src="${HERO}" alt="Families helping families — Family Foreclosure Foundation"><div class="watermark">THE FAMILY FORECLOSURE FOUNDATION · FFF</div></div>
+</section>
+<section class="content soft">
+<div class="section-heading"><p class="eyebrow">OUR MISSION</p><h2>Helping Families Rebuild Stability</h2><p>Foreclosure is not the end of a family's story. The next chapter can begin with information, support, and the right community connections.</p></div>
+<div class="grid">
+<div class="card"><h3>Emergency Needs</h3><p>Connect with available food assistance, housing resources, and pet shelter resources during a difficult transition.</p></div>
+<div class="card"><h3>Employment & Education</h3><p>Explore job training, employment placement, financial education, and workforce development resources.</p></div>
+<div class="card"><h3>Recovery Navigation</h3><p>Learn about possible surplus proceeds and other assets following foreclosure, and find qualified resources for next steps.</p></div>
+</div>
+</section>
+<section class="content"><div class="section-heading"><p class="eyebrow">WHO WE SERVE</p><h2>Every Family Deserves a Path Forward</h2><p>We focus on individuals and families who have already experienced residential or commercial foreclosure.</p></div><div class="grid">
+<div class="card"><h3>Families With Children</h3><p>Parents navigating foreclosure who need help exploring stability, food, housing, and safe places for their children.</p></div>
+<div class="card"><h3>Veterans & Seniors</h3><p>Veterans, older adults, and their families seeking appropriate housing, employment, and community resources.</p></div>
+<div class="card"><h3>Displaced Individuals</h3><p>Former property owners, family members, and qualifying individuals looking for practical next steps after foreclosure.</p></div>
+</div></section>
+<section class="callout"><p class="eyebrow">FAMILIES HELPING FAMILIES</p><h2>Together, We Can Bridge the Gap</h2><p>Connect with the Foundation to explore resources and next steps.</p><a class="btn gold" href="/contact.html">CONTACT THE FOUNDATION</a></section>
+`],
+"/programs.html": ["Programs & Services", `
+<div class="page-hero"><p class="eyebrow">HOW WE HELP</p><h1>Programs & Services</h1><p>Practical resource navigation and community connections for families rebuilding after foreclosure.</p></div>
+<section class="content"><div class="grid">
+<div class="card"><h3>Emergency Food</h3><p>Connections to food assistance and community programs where available.</p></div>
+<div class="card"><h3>Housing Navigation</h3><p>Explore available housing resources, second-chance housing information, and appropriate referrals.</p></div>
+<div class="card"><h3>Pet Shelter Resources</h3><p>Help identifying possible community resources for pets during housing transitions.</p></div>
+<div class="card"><h3>Job Training & Placement</h3><p>Explore employment services, career development, job training, and placement resources.</p></div>
+<div class="card"><h3>Financial Education</h3><p>Connections to budgeting education, financial literacy, and homeownership readiness information.</p></div>
+<div class="card"><h3>Surplus Asset Recovery</h3><p>Guidance on researching potential surplus proceeds after foreclosure and connecting with qualified professionals.</p></div>
+</div><div class="notice">Services provided by outside organizations depend on their eligibility requirements, capacity, and availability. The Foundation does not guarantee placement or a particular outcome.</div><div class="center"><a class="btn gold" href="/apply.html">REQUEST ASSISTANCE</a></div></section>
+`],
+"/who-we-serve.html": ["Who We Serve", `
+<div class="page-hero"><p class="eyebrow">OUR COMMUNITY</p><h1>Who We Serve</h1><p>Individuals and families working to rebuild after residential or commercial foreclosure.</p></div>
+<section class="content"><div class="grid">
+<div class="card"><h3>Parents & Children</h3><p>Families seeking resources for food, safe housing, and family stability following foreclosure.</p></div>
+<div class="card"><h3>Veterans</h3><p>Veterans and their families exploring housing, employment, benefits navigation, and community support resources.</p></div>
+<div class="card"><h3>Seniors</h3><p>Older adults who need help identifying appropriate support services and practical next steps.</p></div>
+<div class="card"><h3>Displaced Families</h3><p>Households adjusting to a change in housing and seeking connections to available assistance.</p></div>
+<div class="card"><h3>Former Property Owners</h3><p>Individuals researching possible surplus proceeds or other assets connected to a completed foreclosure.</p></div>
+<div class="card"><h3>Commercial Property Owners</h3><p>Former owners of commercial properties seeking information about possible recovery options and qualified referrals.</p></div>
+</div><div class="notice"><strong>Post-foreclosure focus:</strong> We are not a pre-foreclosure prevention service. If you are currently facing foreclosure, contact a HUD-approved housing counselor or a qualified foreclosure prevention resource.</div></section>
+`],
+"/resources.html": ["Resources & FAQ", `
+<div class="page-hero"><p class="eyebrow">RESOURCES & FAQ</p><h1>Resources & Frequently Asked Questions</h1><p>General information about foreclosure recovery and the Foundation's approach.</p></div>
+<section class="content">
+<div class="faq"><h3>What is the Family Foreclosure Foundation?</h3><p>We connect families and individuals affected by residential or commercial foreclosure with information, community resources, and appropriate referrals.</p></div>
+<div class="faq"><h3>Do you provide foreclosure prevention?</h3><p>No. Our focus is post-foreclosure support. If you have not yet lost your property, consider contacting a HUD-approved housing counselor.</p></div>
+<div class="faq"><h3>What kind of help may be available?</h3><p>Resources may include food assistance, housing navigation, pet shelter resources, job training, employment placement, financial education, second-chance housing information, and surplus asset recovery guidance.</p></div>
+<div class="faq"><h3>How do I request assistance?</h3><p>Complete the inquiry form on our Request Assistance page. We will review your inquiry and determine what follow-up may be appropriate.</p></div>
+<div class="faq"><h3>Is there a cost?</h3><p>The Foundation aims to connect families with available resources at no cost. Outside organizations may have their own terms, eligibility requirements, or fees; ask them directly before agreeing to a service.</p></div>
+<div class="faq"><h3>What are surplus proceeds?</h3><p>In some circumstances, a foreclosure sale may generate funds beyond the amounts owed and applicable costs. The handling of those funds and who may claim them depend on state law, liens, court procedures, and deadlines.</p></div>
+<div class="faq"><h3>Can you recover surplus funds for me?</h3><p>We can help you understand the general process and connect you with resources or qualified attorneys. We do not provide legal representation or file claims on your behalf.</p></div>
+<div class="faq"><h3>How long will a review take?</h3><p>We aim to review inquiries within 48–72 hours when possible. This is an initial review target, not a guarantee of response time or case resolution.</p></div>
+<div class="faq"><h3>Is my information private?</h3><p>Please share only the information needed for your inquiry. Review our Privacy Policy for information about handling personal information. Do not submit Social Security numbers, passwords, or bank account credentials.</p></div>
+<div class="faq"><h3>What are the laws and deadlines?</h3><p>Foreclosure and surplus claims are governed by state law and local procedure. Deadlines can differ significantly. Check with the courthouse, trustee, tax authority, or a qualified attorney for the precise rules that apply to your situation.</p></div>
+<div class="notice">This website provides general information, not legal, tax, financial, or housing advice. Eligibility and resource availability vary. No particular outcome is guaranteed.</div>
+</section>
+`],
+"/about.html": ["About the Foundation", `
+<div class="page-hero"><p class="eyebrow">ABOUT US</p><h1>About the Foundation</h1><p>Helping families and individuals rebuild after foreclosure.</p></div>
+<section class="content">
+<div class="card"><h3>Our Mission</h3><p>The Family Foreclosure Foundation is dedicated to helping families and individuals who have experienced residential or commercial foreclosure. We believe foreclosure is not the end of the road. With appropriate resources, support, and guidance, families can work toward a more stable future.</p></div>
+<div class="card"><h3>What We Do</h3><p>We help connect families with emergency food and housing resources, pet shelter resources, job training and placement, financial education, second-chance housing information, attorney referrals, and surplus asset recovery navigation.</p></div>
+<div class="card"><h3>Our Values</h3><p>We believe in dignity, compassion, transparency, and practical support. We do not judge the circumstances that led to foreclosure. We focus on realistic next steps and stronger community connections.</p></div>
+<div class="card"><h3>How We Are Funded</h3><p>The Foundation seeks support through donations, grants, and community partnerships. Any services offered by partner organizations remain subject to their own eligibility and availability.</p></div>
+<div class="notice">Our work centers on family stabilization and resource navigation. We do not promise recovery of funds, housing placement, employment, or homeownership.</div>
+</section>
+`],
+"/apply.html": ["Request Assistance", `
+<div class="page-hero"><p class="eyebrow">REQUEST ASSISTANCE</p><h1>Request Assistance</h1><p>If foreclosure has affected your family or property, you may use this form to tell us about your situation and the resources you are seeking.</p></div>
+<section class="content"><form class="form" id="applyForm">
+<fieldset><legend>Section A — Your Information</legend>
+<div class="field"><label for="name">Full name *</label><input id="name" name="Full name" required autocomplete="name"></div>
+<div class="field"><label for="email">Email address *</label><input id="email" name="Email" type="email" required autocomplete="email"></div>
+<div class="field"><label for="phone">Telephone number *</label><input id="phone" name="Telephone" type="tel" required autocomplete="tel"></div>
+<div class="field"><label for="city">City and state *</label><input id="city" name="City and state" required></div>
+<div class="field"><label for="relation">Your relationship to the property</label><select id="relation" name="Relationship"><option>Former owner</option><option>Spouse or partner</option><option>Family member or heir</option><option>Authorized representative</option><option>Other</option></select></div>
+</fieldset>
+<fieldset><legend>Section B — Property Information</legend>
+<div class="field"><label for="address">Property city, state, and ZIP *</label><input id="address" name="Property location" required></div>
+<div class="field"><label for="type">Property type</label><select id="type" name="Property type"><option>Residential</option><option>Commercial</option><option>Mixed use</option><option>Not sure</option></select></div>
+<div class="field"><label for="date">Approximate foreclosure date, if known</label><input id="date" name="Foreclosure date" type="date"></div>
+<div class="field"><label for="details">Tell us about your situation *</label><textarea id="details" name="Situation" required placeholder="Please do not include Social Security numbers, bank account details, or passwords."></textarea></div>
+</fieldset>
+<fieldset><legend>Section C — Resources You Need</legend>
+<div class="field"><label class="choice"><input type="checkbox" name="Resources" value="Food assistance"> Food assistance</label><label class="choice"><input type="checkbox" name="Resources" value="Housing"> Housing resources</label><label class="choice"><input type="checkbox" name="Resources" value="Pet resources"> Pet shelter resources</label><label class="choice"><input type="checkbox" name="Resources" value="Job training"> Job training or employment</label><label class="choice"><input type="checkbox" name="Resources" value="Financial education"> Financial education</label><label class="choice"><input type="checkbox" name="Resources" value="Veteran resources"> Veteran-specific resources</label><label class="choice"><input type="checkbox" name="Resources" value="Senior resources"> Senior support</label><label class="choice"><input type="checkbox" name="Resources" value="Surplus asset recovery"> Surplus asset recovery information</label><label class="choice"><input type="checkbox" name="Resources" value="Other"> Other community resources</label></div>
+<div class="field"><label class="choice"><input type="checkbox" name="Consent to contact" value="Yes" required> I agree that the Foundation may contact me about this inquiry. *</label></div>
+<div class="field"><label class="choice"><input type="checkbox" name="Privacy policy acknowledgment" value="Yes" required> I have read the <a href="/privacy.html">Privacy Policy</a>. *</label></div>
+</fieldset>
+<div class="notice">This form opens an email draft in your email application. Your inquiry is not submitted until you send that email. Please allow 48–72 hours for an initial review when possible. Submitting an inquiry does not guarantee eligibility or recovery of funds.</div>
+<button class="btn gold" type="submit">PREPARE EMAIL INQUIRY</button>
+<p id="formStatus" role="status" aria-live="polite"></p>
+</form></section>
+<script>
+document.getElementById("applyForm").addEventListener("submit",function(e){
+e.preventDefault();
+const f=this;
+const data=new FormData(f);
+const lines=[];
+for(const [key,value] of data.entries()){lines.push(key+": "+value);}
+const subject=encodeURIComponent("Assistance Inquiry - "+(data.get("Full name")||"Applicant"));
+const body=encodeURIComponent(lines.join("\n"));
+document.getElementById("formStatus").textContent="Your email application should open. Please review it and press Send in your email application to submit your inquiry.";
+window.location.href="mailto:Info@TheFamilyForeclosureFoundation.Org?subject="+subject+"&body="+body;
+});
+</script>
+`],
+"/contact.html": ["Contact the Foundation", `
+<div class="page-hero"><p class="eyebrow">GET IN TOUCH</p><h1>Contact the Foundation</h1><p>Questions about the Foundation, our mission, or available resource navigation?</p></div>
+<section class="content"><div class="grid">
+<div class="card"><h3>Email</h3><p><a href="mailto:Info@TheFamilyForeclosureFoundation.Org">Info@TheFamilyForeclosureFoundation.Org</a></p></div>
+<div class="card"><h3>Website</h3><p><a href="${SITE}">thefamilyforeclosurefoundation.org</a></p></div>
+<div class="card"><h3>Mailing Address</h3><p>1500 S. Dairy Ashford Rd., Suite 207<br>Houston, TX 77077</p></div>
+</div><form class="form" id="contactForm"><fieldset><legend>Send an Inquiry</legend>
+<div class="field"><label for="cname">Name *</label><input id="cname" name="Name" required></div>
+<div class="field"><label for="cemail">Email *</label><input id="cemail" name="Email" type="email" required></div>
+<div class="field"><label for="cmessage">Message *</label><textarea id="cmessage" name="Message" required></textarea></div>
+<button class="btn gold" type="submit">PREPARE EMAIL</button><p id="contactStatus" role="status" aria-live="polite"></p>
+</fieldset></form></section>
+<script>
+document.getElementById("contactForm").addEventListener("submit",function(e){
+e.preventDefault();const d=new FormData(this);const subject=encodeURIComponent("Website Contact - "+d.get("Name"));const body=encodeURIComponent("Name: "+d.get("Name")+"\nEmail: "+d.get("Email")+"\n\n"+d.get("Message"));document.getElementById("contactStatus").textContent="Your email application should open. Please press Send to deliver your message.";window.location.href="mailto:Info@TheFamilyForeclosureFoundation.Org?subject="+subject+"&body="+body;
+});
+</script>
+`],
+"/asset-recovery.html": ["Asset Recovery", `
+<div class="page-hero"><p class="eyebrow">KNOW YOUR OPTIONS</p><h1>Surplus Asset Recovery</h1><p>Learn about possible surplus proceeds or other recoverable funds following foreclosure.</p></div>
+<section class="content">
+<div class="card"><h3>What Are Surplus Proceeds?</h3><p>When a foreclosed property is sold for more than the amounts owed and applicable costs, additional proceeds may sometimes remain. Whether anyone can claim those funds depends on the applicable law and the circumstances of the sale.</p></div>
+<div class="card"><h3>Who May Be Eligible?</h3><p>Eligibility depends on the state and county, the foreclosure process, junior liens, court orders, ownership interests, and other facts. Not every former owner is entitled to funds.</p></div>
+<div class="card"><h3>Time Limits</h3><p>Deadlines vary by jurisdiction and type of foreclosure. Act promptly to identify the applicable process and verify deadlines with the responsible court, trustee, government office, or qualified attorney.</p></div>
+<div class="card"><h3>How We Can Help</h3><p>The Foundation can provide general information, help you identify places to research potential funds, and connect you with qualified resources or attorneys. We do not file claims on your behalf or provide legal representation.</p></div>
+<div class="card"><h3>Protect Yourself</h3><p>Be cautious of unsolicited offers and large percentage-based fees. Verify credentials, understand every agreement before signing, and consider consulting a qualified attorney.</p></div>
+<div class="notice">This page is general information, not legal, tax, or financial advice. No recovery is promised or guaranteed.</div>
+<a class="btn gold" href="/apply.html">REQUEST ASSISTANCE</a>
+</section>
+`],
+"/privacy.html": ["Privacy Policy", `
+<div class="page-hero"><p class="eyebrow">YOUR PRIVACY MATTERS</p><h1>Privacy Policy</h1><p>Information about how the Foundation intends to handle inquiries received through this website.</p></div>
+<section class="content">
+<div class="card"><h3>Information We Collect</h3><p>If you contact us, you may provide your name, email address, telephone number, property information, and details about your request.</p></div>
+<div class="card"><h3>How We Use Information</h3><p>We use information to understand your inquiry, communicate with you, and identify relevant resources or referrals.</p></div>
+<div class="card"><h3>Sharing Information</h3><p>We do not sell personal information. We aim to share relevant information with outside organizations only with your consent or as otherwise permitted or required by law.</p></div>
+<div class="card"><h3>Data Security</h3><p>We take reasonable steps to protect information, but no online transmission or electronic storage method can be guaranteed completely secure. Do not send passwords, Social Security numbers, or bank credentials through this website.</p></div>
+<div class="card"><h3>Your Choices</h3><p>You may contact us to request access to, correction of, or deletion of information you previously provided, subject to applicable requirements.</p></div>
+<div class="card"><h3>Contact</h3><p>Questions about privacy may be sent to <a href="mailto:Info@TheFamilyForeclosureFoundation.Org">Info@TheFamilyForeclosureFoundation.Org</a>.</p></div>
+<div class="notice">This policy text should be reviewed against the Foundation's actual data handling practices before publication. It does not replace legal advice.</div>
+</section>
+`]
+};
 
-function layout(title, content) {
-  const nav = NAV.map(([url, label]) =>
-    `<a href="${url}">${label}</a>`
-  ).join("");
+function escapeHtml(s) {
+ return String(s).replace(/[&<>"']/g, c => ({
+  "&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"
+ })[c]);
+}
 
-  return `<!doctype html>
+function render(title, body) {
+ const links = [
+  ["/","Home"],["/programs.html","Programs"],["/who-we-serve.html","Who We Serve"],
+  ["/resources.html","Resources & FAQ"],["/about.html","About"],
+  ["/asset-recovery.html","Asset Recovery"],["/apply.html","Request Assistance"],
+  ["/contact.html","Contact"]
+ ];
+ return `<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>${title} | ${SITE_NAME}</title>
-<meta name="description" content="Family stabilization, foreclosure recovery navigation, housing resources, financial education, job training and community support.">
+<meta name="theme-color" content="#062f50">
+<meta name="description" content="The Family Foreclosure Foundation connects families affected by foreclosure with practical resource navigation, community partnerships, and possible recovery information.">
+<title>${escapeHtml(title)} | ${BRAND}</title>
 <style>${CSS}</style>
 </head>
 <body>
-<header>
-<a class="brand" href="/">${SITE_NAME}</a>
-<nav aria-label="Main navigation">${nav}</nav>
+<header class="header">
+<a class="brand" href="/" aria-label="The Family Foreclosure Foundation home">${BRAND}<small>FAMILIES HELPING FAMILIES</small></a>
+<nav aria-label="Main navigation">${links.map(([url,label])=>`<a href="${url}">${label}</a>`).join("")}</nav>
 </header>
-${content}
+<main>${body}</main>
 <footer>
-<p><strong>${SITE_NAME}</strong></p>
-<p>Because Every Family Is Somebody's Whole Entire World!!</p>
-<p>1500 S. Dairy Ashford Rd., Suite 207, Houston, TX 77077</p>
-<p>Email: <a class="email" href="mailto:info@thefamilyforeclosurefoundation.org">${CONTACT_EMAIL}</a></p>
-<p><a href="/privacy.html">Privacy Policy</a> · <a href="/contact.html">Contact</a></p>
-<p>© ${new Date().getFullYear()} ${SITE_NAME}</p>
+<div class="footer-grid">
+<div><h3>${BRAND}</h3><p>Bridging the gap between foreclosure and the possibility of returning to homeownership through family stabilization, resource navigation, and community partnerships.</p><p><strong>Because every family is somebody's whole entire world.</strong></p></div>
+<div><h3>Contact</h3><p>1500 S. Dairy Ashford Rd., Suite 207<br>Houston, TX 77077</p><p><a href="mailto:Info@TheFamilyForeclosureFoundation.Org">${EMAIL}</a></p><p><a href="/privacy.html">Privacy Policy</a></p></div>
+</div>
+<p>Information on this website is general in nature. Services and eligibility depend on individual circumstances and resource availability. No outcome is guaranteed.</p>
 </footer>
 </body>
 </html>`;
 }
 
-const HOME = `
-<section class="hero-section">
-  <div class="hero-photo">
-    <div class="hero-title-wrap">
-      <div class="hero-title">THE FAMILY FORECLOSURE FOUNDATION</div>
-    </div>
-    <div class="hero-banner">
-      <div class="hero-badge" aria-label="Four star charity navigator 2026">
-        <div class="star-mark" aria-hidden="true"></div>
-        <div class="badge-copy">
-          <div class="stars">★★★★★</div>
-          <div class="label">4 STAR</div>
-          <div class="label">CHARITY NAVIGATOR</div>
-          <div class="year">2026</div>
-        </div>
-      </div>
-
-      <h1 class="hero-headline">Leaving No Family Behind</h1>
-
-      <div class="hero-tagline">
-        <span>Because Every Family Is Somebody's</span>
-        <span>Whole Entire World!!!</span>
-      </div>
-    </div>
-  </div>
-</section>
-<main>
-<section>
-  <h2>Family stabilization is our hallmark.</h2>
-  <p>Our mission is to help bridge the gap between foreclosure and the possibility of returning to homeownership through practical support, community partnerships and connections to appropriate resources.</p>
-</section>
-<section class="cards">
-  <article class="card"><h3>Housing & Emergency Support</h3><p>Connect with housing resources, emergency food support and appropriate community services.</p></article>
-  <article class="card"><h3>Financial Education</h3><p>Find guidance and educational resources to help families understand their options and plan their next steps.</p></article>
-  <article class="card"><h3>Jobs & Training</h3><p>Explore job training and employment connections that can help strengthen household stability.</p></article>
-  <article class="card"><h3>Surplus Asset Recovery</h3><p>Learn about possible surplus proceeds and how to locate official information about a claim.</p></article>
-</section>
-<section class="notice">
-  <strong>Important:</strong> Assistance and referrals depend on eligibility, availability and partner programs. We do not guarantee housing, financial recovery or legal outcomes.
-</section>
-</main>`;
-
-const PAGE_CONTENT = {
-  "/": ["Home", HOME],
-
-  "/index.html": ["Home", HOME],
-
-  "/programs.html": ["Programs & Services", `
-  <main><h1>Programs & Services</h1>
-  <p>We help families explore support and community connections following foreclosure or housing instability.</p>
-  <div class="cards">
-  <article class="card"><h3>Emergency Resources</h3><p>Connections to food, housing and other available community support.</p></article>
-  <article class="card"><h3>Financial Education</h3><p>Educational resources to help families make informed financial decisions.</p></article>
-  <article class="card"><h3>Employment Support</h3><p>Connections to job training and employment resources.</p></article>
-  <article class="card"><h3>Asset Recovery Navigation</h3><p>Information about investigating possible surplus proceeds through official channels.</p></article>
-  <article class="card"><h3>Family Stabilization</h3><p>Resource navigation and referrals based on each family's circumstances.</p></article>
-  <article class="card"><h3>Community Partnerships</h3><p>Collaboration with organizations that serve families and communities.</p></article>
-  </div><p><a class="button" href="/apply.html">Request Assistance</a></p></main>`],
-
-  "/who-we-serve.html": ["Who We Serve", `
-  <main><h1>Who We Serve</h1>
-  <p>We aim to help families navigating foreclosure, housing instability and the difficult transition that can follow losing a home.</p>
-  <div class="cards">
-  <article class="card"><h3>Seniors</h3><p>Resource navigation for older adults facing housing or financial challenges.</p></article>
-  <article class="card"><h3>Veterans</h3><p>Connections to relevant veteran-serving and housing resources.</p></article>
-  <article class="card"><h3>Low-to-Moderate-Income Families</h3><p>Information about community support and available assistance programs.</p></article>
-  <article class="card"><h3>Families Affected by Foreclosure</h3><p>Guidance toward possible next steps, resources and recovery options.</p></article>
-  </div></main>`],
-
-  "/resources.html": ["Resources & FAQ", `
-  <main><h1>Resources & Frequently Asked Questions</h1>
-  <section><h2>Where should I start?</h2><p>Identify your most urgent needs, keep relevant paperwork organized and contact official agencies or qualified professionals when needed.</p></section>
-  <section><h2>Can the Foundation guarantee assistance?</h2><p>No. Resources, referrals and eligibility vary by program and provider.</p></section>
-  <section><h2>What if I believe a foreclosure sale created surplus proceeds?</h2><p>Check the relevant county court, trustee, tax authority or other official agency. Rules and deadlines vary. Confirm information through official channels.</p></section>
-  <section><h2>Is there a fee to claim surplus proceeds?</h2><p>Rules differ by jurisdiction and claim type. Confirm official requirements and carefully review any agreement before paying a third party.</p></section>
-  </main>`],
-
-  "/about.html": ["About Us", `
-  <main><h1>About The Family Foreclosure Foundation</h1>
-  <p>We believe a foreclosure should not define a family's future. Our work focuses on family stabilization, resource navigation and connections to community partners that may help families rebuild.</p>
-  <p>Our approach emphasizes dignity, transparency and practical pathways toward stability.</p>
-  <div class="notice">Our goal is to help families understand potential options and connect with appropriate resources. We do not replace attorneys, financial advisers, government agencies or housing counselors.</div>
-  </main>`],
-
-  "/asset-recovery.html": ["Surplus Asset Recovery", `
-  <main><h1>Surplus Asset Recovery Navigation</h1>
-  <p>In some circumstances, a foreclosure or tax sale may generate surplus funds after required debts and costs are addressed. Whether funds exist and who may claim them depends on the specific circumstances and jurisdiction.</p>
-  <section><h2>Possible next steps</h2>
-  <ol><li>Identify the property and the relevant county or agency.</li><li>Check official court, trustee or tax-sale records.</li><li>Ask the responsible agency about claim procedures and deadlines.</li></ol>
-  </section>
-  <div class="notice"><strong>Protect yourself:</strong> Beware of guaranteed-recovery promises and pressure to sign contracts. The Foundation does not guarantee that surplus funds exist or that a claim will be approved.</div>
-  <p><a class="button" href="/apply.html">Ask About Resource Navigation</a></p>
-  </main>`],
-
-  "/apply.html": ["Request Assistance", `
-  <main><h1>Request Assistance or Resource Navigation</h1>
-  <p>To ask about possible resources, email us using the address below. Please do not send Social Security numbers, bank details, passwords or other sensitive personal information in an initial email.</p>
-  <p><a class="button" href="mailto:info@thefamilyforeclosurefoundation.org?subject=Resource%20Navigation%20Inquiry">Email the Foundation</a></p>
-  <p>Email: <strong>${CONTACT_EMAIL}</strong></p>
-  <div class="notice">Sending an inquiry does not guarantee assistance, create an attorney-client relationship or establish eligibility for a program.</div>
-  </main>`],
-
-  "/contact.html": ["Contact Us", `
-  <main><h1>Contact Us</h1>
-  <p>For general questions and resource-navigation inquiries, contact us by email.</p>
-  <p><a class="button" href="mailto:info@thefamilyforeclosurefoundation.org">Email the Foundation</a></p>
-  <p><strong>${CONTACT_EMAIL}</strong></p>
-  <p>1500 S. Dairy Ashford Rd., Suite 207, Houston, TX 77077</p>
-  </main>`],
-
-  "/privacy.html": ["Privacy Policy", `
-  <main><h1>Privacy Policy</h1>
-  <p>This page provides general information about privacy practices and should be reviewed for legal compliance before publication.</p>
-  <h2>Information you share</h2><p>If you email us, we may receive the information you include in your message.</p>
-  <h2>How information may be used</h2><p>Information may be used to respond to inquiries and coordinate requested resource navigation.</p>
-  <h2>Protect your information</h2><p>Please do not email passwords, full payment-card details or unnecessary sensitive personal information.</p>
-  <h2>Contact</h2><p>${CONTACT_EMAIL}</p>
-  </main>`]
-};
-
-const NOT_FOUND = `
-<main><h1>Page Not Found</h1>
-<p>We couldn't find that page. Please return to the home page or use the site navigation.</p>
-<a class="button" href="/">Return Home</a></main>`;
-
 export default {
-  async fetch(request) {
-    const url = new URL(request.url);
-    let path = url.pathname;
-
-    if (path !== "/" && path.endsWith("/")) {
-      path = path.slice(0, -1);
-    }
-
-    let entry = PAGE_CONTENT[path];
-
-    if (!entry && !path.endsWith(".html")) {
-      entry = PAGE_CONTENT[path + ".html"];
-    }
-
-    if (entry) {
-      return new Response(layout(entry[0], entry[1]), {
-        headers: {
-          "Content-Type": "text/html; charset=utf-8",
-          "Cache-Control": "public, max-age=300"
-        }
-      });
-    }
-
-    return new Response(layout("Page Not Found", NOT_FOUND), {
-      status: 404,
-      headers: { "Content-Type": "text/html; charset=utf-8" }
-    });
+ async fetch(request) {
+  const url = new URL(request.url);
+  let path = decodeURIComponent(url.pathname);
+  if (path !== "/" && path.endsWith("/")) path = path.slice(0,-1);
+  if (path === "/index.html") path = "/";
+  if (path === "/favicon.ico") return new Response(null,{status:204});
+  const entry = pages[path];
+  if (!entry) {
+   return new Response(render("Page Not Found",`<section class="content center"><h1>Page Not Found</h1><p>The page you requested could not be found.</p><a class="btn gold" href="/">RETURN HOME</a></section>`),{
+    status:404,headers:{"Content-Type":"text/html; charset=utf-8","Cache-Control":"no-store"}
+   });
   }
+  return new Response(render(entry[0],entry[1]),{
+   headers:{
+    "Content-Type":"text/html; charset=utf-8",
+    "Cache-Control":"public, max-age=300",
+    "X-Content-Type-Options":"nosniff",
+    "Referrer-Policy":"strict-origin-when-cross-origin"
+   }
+  });
+ }
 };
