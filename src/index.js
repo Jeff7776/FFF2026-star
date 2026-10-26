@@ -23,7 +23,7 @@ h2{font-size:clamp(27px,3vw,40px);letter-spacing:-.025em}
 h3{font-size:20px}
 .hero p,.intro{font-size:17px;color:var(--muted)}
 .hero-photo{position:relative;min-width:0}
-.hero-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border-radius:15px;box-shadow:0 18px 45px #062f5025;background:var(--navy)}
+.hero-photo img{width:100%;height:auto;display:block;border-radius:15px;object-fit:contain;object-position:center center;box-shadow:0 18px 45px #062f5025;background:var(--navy)}
 .watermark{position:absolute;top:0;left:0;right:0;padding:12px;background:#062f5055;color:#fff;text-align:center;font-size:11px;font-weight:900;letter-spacing:.12em;text-shadow:0 1px 4px #000}
 .buttons{display:flex;flex-wrap:wrap;gap:12px;margin:25px 0}
 .btn{display:inline-block;padding:13px 19px;background:var(--navy);color:white;text-decoration:none;border-radius:6px;font-size:12px;font-weight:900;letter-spacing:.04em}
