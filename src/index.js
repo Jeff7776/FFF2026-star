@@ -15,7 +15,78 @@ a{color:inherit}
 nav{display:flex;flex-wrap:wrap;gap:5px}
 nav a{font-size:12px;font-weight:700;text-decoration:none;padding:8px;border-radius:5px;color:var(--navy)}
 nav a:hover{background:#eaf3f8}
-.hero{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center;padding:65px 6%;background:linear-gradient(135deg,#f2f7fa,#fff 70%)}
+
+.hero-scene{
+ position:relative;overflow:hidden;background:#0a3b60;
+ min-height:760px;
+}
+.hero-scene::before{
+ content:"";position:absolute;inset:0;
+ background-image:url("https://raw.githubusercontent.com/Jeff7776/FFF2026-star/main/family_foreclosure_foundation_hero.jpg");
+ background-size:cover;background-position:center center;filter:saturate(1.05) contrast(1.02);
+}
+.hero-scene::after{
+ content:"";position:absolute;inset:0;
+ background:linear-gradient(180deg, rgba(9,36,52,0.15) 0%, rgba(9,36,52,0.10) 28%, rgba(9,36,52,0.15) 100%);
+}
+.hero-inner{position:relative;z-index:1;padding:18px 2% 0}
+.hero-top{display:grid;grid-template-columns:180px 1fr 220px;align-items:center;gap:18px;padding:0 1%;}
+.house-mark{
+ width:150px;height:110px;justify-self:flex-start;position:relative;margin-left:12px;
+ border:4px solid rgba(255,255,255,.9);border-radius:18px 18px 26px 26px;background:rgba(6,47,80,.72);
+ box-shadow: 0 0 0 4px rgba(14,87,133,.75), 0 10px 20px rgba(5,20,32,.35);
+}
+.house-mark::before{
+ content:"";position:absolute;left:50%;top:-26px;transform:translateX(-50%);width:120px;height:64px;
+ background:transparent;border-left:6px solid rgba(255,255,255,.9);border-top:6px solid rgba(255,255,255,.9);
+ border-radius:12px 12px 0 0;transform:translateX(-50%) rotate(-45deg);clip-path:polygon(50% 0%, 100% 100%, 0% 100%);
+}
+.house-mark::after{
+ content:"";position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);width:82px;height:60px;
+ border:4px solid rgba(255,255,255,.9);border-top:0;border-radius:10px;background:rgba(255,255,255,.05);
+}
+.house-mark .roof-line{position:absolute;left:50%;top:12px;transform:translateX(-50%);width:118px;height:32px;border-bottom:4px solid rgba(255,255,255,.8);border-radius:0 0 20px 20px;}
+.house-mark .people{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);display:flex;gap:10px;align-items:flex-end}
+.house-mark .people span{display:block;width:18px;height:18px;border-radius:50%;background:rgba(255,255,255,.9);box-shadow:0 0 0 2px rgba(6,47,80,.65)}
+.house-mark .people span:nth-child(2){height:24px}
+.house-mark .people span:nth-child(3){height:20px}
+.hero-title-block{text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px;}
+.hero-title-block h1{
+ margin:0;color:#fff;font-size:clamp(2.8rem, 4vw, 7rem);font-weight:900;line-height:.95;letter-spacing:-0.07em;font-family:Georgia, 'Times New Roman', serif;
+ text-transform:uppercase;text-shadow:0 5px 18px rgba(0,0,0,.2),0 0 18px rgba(255,255,255,.12);white-space:nowrap;
+}
+.hero-line{display:flex;align-items:center;justify-content:center;gap:18px;width:min(100%, 920px);}
+.hero-line .gold-rule{height:4px;flex:1;background:linear-gradient(90deg, rgba(245,189,50,0.15), rgba(245,189,50,0.95), rgba(245,189,50,0.15));border-radius:999px;}
+.hero-line h2{
+ margin:0;color:#ffffff;font-size:clamp(2rem, 3vw, 4rem);font-weight:700;letter-spacing:-0.04em;line-height:1.1;font-family:Georgia, 'Times New Roman', serif;
+ text-shadow:0 5px 16px rgba(0,0,0,.18);
+}
+.rating-badge{
+ justify-self:end;display:flex;flex-direction:column;align-items:center;gap:8px;
+ width:175px;padding:16px 10px 12px;border-radius:16px;background:rgba(14,83,123,.9);border:3px solid rgba(255,255,255,.65);
+ box-shadow:0 12px 25px rgba(0,0,0,.12);
+}
+.rating-badge .star-badge{
+ position:relative;width:74px;height:74px;border-radius:50%;
+ background:rgba(255,255,255,.10);border:3px solid rgba(255,255,255,.85);
+ display:grid;place-items:center;color:#f5d465;font-size:2rem;
+}
+.rating-badge .star-badge::before{content:"✦";display:block;}
+.rating-badge .badge-text{color:#fff;text-align:center;line-height:1.1;}
+.rating-badge .badge-text .small{display:block;font-size:0.75rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;}
+.rating-badge .badge-text .large{display:block;font-size:0.66rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;}
+.rating-badge .badge-text .year{display:block;font-size:1.2rem;font-weight:900;letter-spacing:-0.05em;margin-top:4px;}
+.feature-strip{
+ position:relative;z-index:1;margin-top:20px;border-top:4px solid rgba(245,189,50,.9);background:linear-gradient(90deg, rgba(5,45,68,.94), rgba(7,90,138,.95), rgba(5,45,68,.9));
+ display:grid;grid-template-columns:repeat(5, minmax(160px,1fr));
+ align-items:center;gap:0;
+ box-shadow:inset 0 0 0 2px rgba(255,255,255,.12);
+}
+.feature-strip .item{display:flex;align-items:center;justify-content:center;gap:12px;min-height:96px;padding:14px 16px;border-right:1px solid rgba(255,255,255,.18);color:#fff;text-transform:uppercase;font-weight:900;letter-spacing:.04em;}
+.feature-strip .item:last-child{border-right:none}
+.feature-strip .item .icon{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.3);font-size:1.7rem;}
+.feature-strip .item .text{font-size:0.72rem;line-height:1.2;display:flex;flex-direction:column;}
+
 .eyebrow{font-size:11px;font-weight:900;letter-spacing:.15em;color:#947016;text-transform:uppercase}
 h1,h2,h3{line-height:1.2;color:var(--navy)}
 h1{font-size:clamp(36px,5vw,61px);letter-spacing:-.04em;margin:16px 0}
@@ -57,23 +128,47 @@ footer h3,footer a{color:white}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr;gap:30px}
 footer p{color:#e0e9ef}
 footer a{overflow-wrap:anywhere}
-@media(max-width:800px){.hero{grid-template-columns:1fr;padding:35px 5%;gap:22px}.hero-photo{grid-row:1}.grid{grid-template-columns:1fr}.header{align-items:flex-start}.footer-grid{grid-template-columns:1fr}section.content{padding:38px 5%}nav a{padding:7px;font-size:11px}}
+@media(max-width:1100px){.hero-top{grid-template-columns:1fr;justify-items:center}.rating-badge{justify-self:center}.hero-title-block h1{white-space:normal}.feature-strip{grid-template-columns:repeat(2, minmax(160px,1fr));}.feature-strip .item:nth-child(2n){border-right:none}}
+@media(max-width:800px){.hero-scene{min-height:620px}.hero{grid-template-columns:1fr;padding:35px 5%;gap:22px}.hero-photo{grid-row:1}.grid{grid-template-columns:1fr}.header{align-items:flex-start}.footer-grid{grid-template-columns:1fr}section.content{padding:38px 5%}nav a{padding:7px;font-size:11px}.feature-strip{grid-template-columns:1fr}.feature-strip .item{border-right:none;border-bottom:1px solid rgba(255,255,255,.12)}}
 `;
 
 const pages = {
 "/": ["A New Path Forward After Foreclosure", `
-<section class="hero">
-<div>
-<p class="eyebrow">Families Helping Families</p>
-<p class="intro">THE FAMILY FORECLOSURE FOUNDATION</p>
-<h1>A New Path Forward After Foreclosure</h1>
-<p>Because every family is somebody's whole entire world.</p>
-<p>We help bridge the gap between foreclosure and the possibility of returning to homeownership through family stabilization, community partnerships, practical resource navigation, and connections to appropriate resources.</p>
-<div class="buttons"><a class="btn gold" href="/apply.html">REQUEST ASSISTANCE</a><a class="btn outline" href="/programs.html">EXPLORE OUR PROGRAMS</a></div>
-<p><strong>Our focus is post-foreclosure support.</strong> We help families explore the next steps toward stability.</p>
-</div>
-<div class="hero-photo"><img src="${HERO}" alt="Families helping families — Family Foreclosure Foundation"><div class="watermark">THE FAMILY FORECLOSURE FOUNDATION · FFF</div></div>
+<section class="hero-scene">
+  <div class="hero-inner">
+    <div class="hero-top">
+      <div class="house-mark" aria-label="The Family Foreclosure Foundation home icon">
+        <div class="roof-line"></div>
+        <div class="people"><span></span><span></span><span></span></div>
+      </div>
+      <div class="hero-title-block">
+        <h1>THE FAMILY FORECLOSURE FOUNDATION</h1>
+        <div class="hero-line">
+          <span class="gold-rule"></span>
+          <h2>Leaving No Family Left Behind.</h2>
+          <span class="gold-rule"></span>
+        </div>
+      </div>
+      <div class="rating-badge" aria-label="Four star charity navigator 2026">
+        <div class="star-badge" aria-hidden="true"></div>
+        <div class="badge-text">
+          <span class="small">Charity</span>
+          <span class="large">Navigator</span>
+          <span class="small">Four Star</span>
+          <span class="year">Candid. 2026</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="feature-strip" aria-label="Foundation service highlights">
+    <div class="item"><div class="icon">🏠</div><div class="text"><span>Housing</span><span>Stability</span></div></div>
+    <div class="item"><div class="icon">🍽️</div><div class="text"><span>Food</span><span>Access</span></div></div>
+    <div class="item"><div class="icon">🏡</div><div class="text"><span>New Home</span><span>Development</span></div></div>
+    <div class="item"><div class="icon">🤝</div><div class="text"><span>Community</span><span>Partnerships</span></div></div>
+    <div class="item"><div class="icon">🤲</div><div class="text"><span>Volunteer &amp;</span><span>Sponsor</span></div></div>
+  </div>
 </section>
+<main>
 <section class="content soft">
 <div class="section-heading"><p class="eyebrow">OUR MISSION</p><h2>Helping Families Rebuild Stability</h2><p>Foreclosure is not the end of a family's story. The next chapter can begin with information, support, and the right community connections.</p></div>
 <div class="grid">
@@ -88,7 +183,7 @@ const pages = {
 <div class="card"><h3>Displaced Individuals</h3><p>Former property owners, family members, and qualifying individuals looking for practical next steps after foreclosure.</p></div>
 </div></section>
 <section class="callout"><p class="eyebrow">FAMILIES HELPING FAMILIES</p><h2>Together, We Can Bridge the Gap</h2><p>Connect with the Foundation to explore resources and next steps.</p><a class="btn gold" href="/contact.html">CONTACT THE FOUNDATION</a></section>
-`],
+</main>`],
 "/programs.html": ["Programs & Services", `
 <div class="page-hero"><p class="eyebrow">HOW WE HELP</p><h1>Programs & Services</h1><p>Practical resource navigation and community connections for families rebuilding after foreclosure.</p></div>
 <section class="content"><div class="grid">
