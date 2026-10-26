@@ -18,79 +18,75 @@ nav a:hover{background:#eaf3f8}
 
 .hero-scene{
   position:relative;overflow:hidden;background:#0a3b60;
-  min-height:82vh;
+  min-height:72vh;
   display:flex;flex-direction:column;justify-content:flex-start;
-  padding-bottom:26px;
 }
 .hero-scene::before{
   content:"";position:absolute;inset:0;
   background-image:url("https://raw.githubusercontent.com/Jeff7776/FFF2026-star/main/family_foreclosure_foundation_hero.jpg");
-  background-size:cover;background-position:center top;filter:saturate(1.05) contrast(1.02);
+  background-size:cover;background-position:center center;filter:saturate(1.05) contrast(1.02);
 }
 .hero-scene::after{
   content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg, rgba(9,36,52,0.12) 0%, rgba(9,36,52,0.08) 32%, rgba(9,36,52,0.10) 100%);
+  background:linear-gradient(180deg, rgba(9,36,52,0.15) 0%, rgba(9,36,52,0.10) 28%, rgba(9,36,52,0.15) 100%);
 }
-.hero-inner{position:relative;z-index:1;padding:10px 2% 0;flex:1;display:flex;align-items:flex-start;}
+.hero-inner{position:relative;z-index:1;padding:18px 2% 0;flex:1;display:flex;align-items:flex-start;}
 .hero-top{display:grid;grid-template-columns:180px 1fr 220px;align-items:center;gap:18px;padding:0 1%;width:100%;}
-.hero-title-block{text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px;max-width:100%;position:relative;z-index:2;}
+.house-mark{
+  width:150px;height:110px;justify-self:flex-start;position:relative;margin-left:12px;
+  border:4px solid rgba(255,255,255,.9);border-radius:18px 18px 26px 26px;background:rgba(6,47,80,.72);
+  box-shadow: 0 0 0 4px rgba(14,87,133,.75), 0 10px 20px rgba(5,20,32,.35);
+}
+.house-mark::before{
+  content:"";position:absolute;left:50%;top:-26px;transform:translateX(-50%);width:120px;height:64px;
+  background:transparent;border-left:6px solid rgba(255,255,255,.9);border-top:6px solid rgba(255,255,255,.9);
+  border-radius:12px 12px 0 0;transform:translateX(-50%) rotate(-45deg);clip-path:polygon(50% 0%, 100% 100%, 0% 100%);
+}
+.house-mark::after{
+  content:"";position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);width:82px;height:60px;
+  border:4px solid rgba(255,255,255,.9);border-top:0;border-radius:10px;background:rgba(255,255,255,.05);
+}
+.house-mark .roof-line{position:absolute;left:50%;top:12px;transform:translateX(-50%);width:118px;height:32px;border-bottom:4px solid rgba(255,255,255,.8);border-radius:0 0 20px 20px;}
+.house-mark .people{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);display:flex;gap:10px;align-items:flex-end}
+.house-mark .people span{display:block;width:18px;height:18px;border-radius:50%;background:rgba(255,255,255,.9);box-shadow:0 0 0 2px rgba(6,47,80,.65)}
+.house-mark .people span:nth-child(2){height:24px}
+.house-mark .people span:nth-child(3){height:20px}
+.hero-title-block{text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;max-width:100%;}
 .hero-title-block h1{
-  margin:0;color:rgba(255,255,255,0.9);font-size:clamp(2.8rem,5vw,9rem);font-weight:900;line-height:.88;letter-spacing:-0.07em;font-family:Georgia, 'Times New Roman', serif;
-  text-transform:uppercase;text-shadow:0 5px 18px rgba(0,0,0,.2),0 0 18px rgba(255,255,255,.12);white-space:nowrap;max-width:100%;
+  margin:0;color:#fff;font-size:clamp(2.8rem,4vw,7rem);font-weight:900;line-height:.95;letter-spacing:-0.07em;font-family:Georgia, 'Times New Roman', serif;
+  text-transform:uppercase;text-shadow:0 5px 18px rgba(0,0,0,.2),0 0 18px rgba(255,255,255,.12);white-space:normal;max-width:1400px;
 }
-.hero-slogan-wrap{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;width:min(100%, 1460px);margin:0 auto 0;padding:0 2%;}
-.hero-slogan-wrap::before,.hero-slogan-wrap::after{
-  content:"";position:absolute;inset:auto 0 0 0;height:58px;display:block;
-  background:linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.4) 12%, rgba(255,255,255,0.0) 22%, rgba(7,88,138,0.96) 30%, rgba(7,88,138,0.96) 70%, rgba(255,255,255,0.0) 78%, rgba(255,255,255,0.4) 88%, rgba(0,0,0,0) 100%);
-  border-radius:48% 52% 30% 70% / 70% 40% 60% 30%;
-  box-shadow:0 0 0 4px rgba(245,189,50,0.9), 0 0 20px rgba(245,189,50,0.18);
+.hero-line{display:flex;align-items:center;justify-content:center;gap:18px;width:min(100%, 920px);}
+.hero-line .gold-rule{height:4px;flex:1;background:linear-gradient(90deg, rgba(245,189,50,0.15), rgba(245,189,50,0.95), rgba(245,189,50,0.15));border-radius:999px;}
+.hero-line h2{
+  margin:0;color:#ffffff;font-size:clamp(2rem, 3vw, 4rem);font-weight:700;letter-spacing:-0.04em;line-height:1.1;font-family:Georgia, 'Times New Roman', serif;
+  text-shadow:0 5px 16px rgba(0,0,0,.18);
 }
-.hero-slogan-wrap::after{
-  transform:translateY(8px);height:42px;background:linear-gradient(90deg, rgba(255,255,255,0), rgba(245,189,50,0.96) 15%, rgba(245,189,50,0.96) 85%, rgba(255,255,255,0));
-  box-shadow:none;border-radius:50%;
+.rating-badge{
+  justify-self:end;display:flex;flex-direction:column;align-items:center;gap:8px;
+  width:175px;padding:16px 10px 12px;border-radius:16px;background:rgba(14,83,123,.9);border:3px solid rgba(255,255,255,.65);
+  box-shadow:0 12px 25px rgba(0,0,0,.12);
 }
-.hero-slogan{
-  position:relative;z-index:3;display:flex;align-items:center;justify-content:center;
-  margin:0 auto;min-width:0;width:min(100%, 1200px);
-  color:#f5bd32;font-size:clamp(2.7rem,5vw,7rem);font-weight:700;letter-spacing:-0.05em;
-  font-family:Georgia, 'Times New Roman', serif;font-style:italic;line-height:1.04;
-  text-shadow:0 4px 0 rgba(0,0,0,.08),0 10px 25px rgba(0,0,0,.16);
-  white-space:nowrap;
+.rating-badge .star-badge{
+  position:relative;width:74px;height:74px;border-radius:50%;
+  background:rgba(255,255,255,.10);border:3px solid rgba(255,255,255,.85);
+  display:grid;place-items:center;color:#f5d465;font-size:2rem;
 }
-.hero-slogan .line{display:inline-block;padding:0 0.08em;}
-.hero-wave-band{
-  position:relative;z-index:2;display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:18px;
-  width:min(100%, 1460px);margin:8px auto 0;padding:0 2% 0;
+.rating-badge .star-badge::before{content:"✦";display:block;}
+.rating-badge .badge-text{color:#fff;text-align:center;line-height:1.1;}
+.rating-badge .badge-text .small{display:block;font-size:0.75rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;}
+.rating-badge .badge-text .large{display:block;font-size:0.66rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;}
+.rating-badge .badge-text .year{display:block;font-size:1.2rem;font-weight:900;letter-spacing:-0.05em;margin-top:4px;}
+.feature-strip{
+  position:relative;z-index:1;margin-top:20px;border-top:4px solid rgba(245,189,50,.9);background:linear-gradient(90deg, rgba(5,45,68,.94), rgba(7,90,138,.95), rgba(5,45,68,.9));
+  display:grid;grid-template-columns:repeat(5, minmax(160px,1fr));
+  align-items:center;gap:0;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.12);
 }
-.hero-wave-band .left,
-.hero-wave-band .right{
-  position:relative;display:flex;align-items:flex-end;justify-content:center;
-  min-height:170px;
-}
-.hero-wave-band .gold-wave{position:absolute;left:0;right:0;bottom:20px;height:46px;border-radius:50%;
-  background:linear-gradient(90deg, rgba(245,189,50,0), rgba(245,189,50,0.9) 12%, rgba(245,189,50,0.9) 88%, rgba(245,189,50,0));
-  box-shadow:0 0 0 3px rgba(245,189,50,0.6), 0 0 0 6px rgba(245,189,50,0.15);
-  transform:skewY(-2deg);
-}
-.hero-wave-band .blue-wave{position:absolute;left:0;right:0;bottom:0;height:98px;border-radius:50% 50% 35% 65% / 100% 100% 0% 0%;
-  background:linear-gradient(90deg, rgba(7,88,138,0.9), rgba(12,93,142,0.98) 40%, rgba(7,88,138,0.9));
-  box-shadow:inset 0 10px 20px rgba(255,255,255,0.12), 0 0 0 2px rgba(245,189,50,0.75);
-}
-.hero-wave-band .badge{position:relative;z-index:3;display:flex;align-items:center;justify-content:center;gap:18px;min-width:320px;padding:10px 28px 22px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.2);}
-.hero-wave-band .badge .star-mark{
-  width:110px;height:110px;border:4px solid rgba(255,255,255,0.9);border-radius:50%;
-  background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;position:relative;box-shadow:0 0 0 3px rgba(12,93,142,.6);
-}
-.hero-wave-band .badge .star-mark::before{content:"✦";display:block;color:#fff;font-size:2.5rem;}
-.hero-wave-band .badge .star-mark::after{content:"";position:absolute;inset:14px;border-radius:50%;box-shadow:0 0 0 2px rgba(255,255,255,.6);}
-.hero-wave-band .badge .badge-text{font-weight:900;line-height:1;color:#fff;text-transform:uppercase;letter-spacing:-0.04em;}
-.hero-wave-band .badge .badge-text .big{display:block;font-size:2.35rem;}
-.hero-wave-band .badge .badge-text .small{display:block;font-size:0.9rem;letter-spacing:0.12em;}.hero-wave-band .badge .badge-text .year{display:block;font-size:2.05rem;letter-spacing:-0.08em;margin-top:4px;}
-.hero-wave-band .tagline{position:relative;z-index:3;display:flex;align-items:flex-end;justify-content:center;min-width:0;padding-bottom:18px;color:#f5bd32;font-size:clamp(1.6rem,2vw,3.6rem);font-family:Georgia,'Times New Roman',serif;font-style:italic;line-height:1.1;text-shadow:0 4px 0 rgba(0,0,0,.08),0 10px 25px rgba(0,0,0,.14);text-align:center;white-space:nowrap;}
-.hero-wave-band .tagline span{display:inline-block;}
-.rating-badge{display:none}
-.house-mark{display:none}
-.feature-strip{display:none}
+.feature-strip .item{display:flex;align-items:center;justify-content:center;gap:12px;min-height:96px;padding:14px 16px;border-right:1px solid rgba(255,255,255,.18);color:#fff;text-transform:uppercase}
+.feature-strip .item:last-child{border-right:none}
+.feature-strip .item .icon{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.3);font-size:1.7rem;}
+.feature-strip .item .text{font-size:0.72rem;line-height:1.2;display:flex;flex-direction:column;}
 
 .eyebrow{font-size:11px;font-weight:900;letter-spacing:.15em;color:#947016;text-transform:uppercase}
 h1,h2,h3{line-height:1.2;color:var(--navy)}
@@ -133,8 +129,8 @@ footer h3,footer a{color:white}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr;gap:30px}
 footer p{color:#e0e9ef}
 footer a{overflow-wrap:anywhere}
-@media(max-width:1100px){.hero-top{grid-template-columns:1fr;justify-items:center}.hero-title-block h1{white-space:normal}.hero-wave-band{grid-template-columns:1fr}.hero-wave-band .badge,.hero-wave-band .tagline{min-width:0}.hero-scene{min-height:68vh}} 
-@media(max-width:800px){.hero-scene{min-height:54vh}.hero{grid-template-columns:1fr;padding:35px 5%;gap:22px}.grid{grid-template-columns:1fr}.header{align-items:flex-start}.hero-title-block h1{font-size:clamp(2.1rem,9vw,4rem)}.hero-slogan{white-space:normal;text-align:center}.hero-wave-band .badge{padding:10px 14px 16px}.hero-wave-band .badge .badge-text .big{font-size:1.5rem}.hero-wave-band .badge .badge-text .small{font-size:0.7rem}.hero-wave-band .badge .badge-text .year{font-size:1.6rem}.hero-wave-band .tagline{font-size:clamp(1.3rem,5vw,3rem);white-space:normal}}
+@media(max-width:1100px){.hero-top{grid-template-columns:1fr;justify-items:center}.rating-badge{justify-self:center}.hero-title-block h1{white-space:normal}.feature-strip{grid-template-columns:repeat(3,minmax(140px,1fr))}.hero-scene{min-height:65vh}}
+@media(max-width:800px){.hero-scene{min-height:56vh}.hero{grid-template-columns:1fr;padding:35px 5%;gap:22px}.hero-photo{grid-row:1}.grid{grid-template-columns:1fr}.header{align-items:flex-start}.feature-strip{grid-template-columns:repeat(2,minmax(120px,1fr))}.hero-line{gap:10px}.hero-line h2{font-size:clamp(1.4rem,7vw,2.6rem)}.hero-title-block h1{font-size:clamp(2.1rem,9vw,4rem)}}
 `;
 
 const pages = {
@@ -142,28 +138,35 @@ const pages = {
 <section class="hero-scene">
   <div class="hero-inner">
     <div class="hero-top">
-      <div></div>
+      <div class="house-mark" aria-label="The Family Foreclosure Foundation home icon">
+        <div class="roof-line"></div>
+        <div class="people"><span></span><span></span><span></span></div>
+      </div>
       <div class="hero-title-block">
         <h1>THE FAMILY FORECLOSURE FOUNDATION</h1>
+        <div class="hero-line">
+          <span class="gold-rule"></span>
+          <h2>Leaving No Family Left Behind.</h2>
+          <span class="gold-rule"></span>
+        </div>
       </div>
-      <div></div>
+      <div class="rating-badge" aria-label="Four star charity navigator 2026">
+        <div class="star-badge" aria-hidden="true"></div>
+        <div class="badge-text">
+          <span class="small">Charity</span>
+          <span class="large">Navigator</span>
+          <span class="small">Four Star</span>
+          <span class="year">Candid. 2026</span>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="hero-slogan-wrap">
-    <div class="hero-slogan"><span class="line">Leaving No Family Behind</span></div>
-  </div>
-  <div class="hero-wave-band">
-    <div class="left"><div class="blue-wave"></div><div class="gold-wave"></div></div>
-    <div class="badge">
-      <div class="star-mark" aria-hidden="true"></div>
-      <div class="badge-text">
-        <span class="big">4 Star</span>
-        <span class="small">Charity Navigator</span>
-        <span class="year">2026</span>
-      </div>
-    </div>
-    <div class="right"><div class="blue-wave"></div><div class="gold-wave"></div></div>
-    <div class="tagline"><span>Because Every Family Is Somebody's<br>Whole Entire World!!!</span></div>
+  <div class="feature-strip" aria-label="Foundation service highlights">
+    <div class="item"><div class="icon">🏠</div><div class="text"><span>Housing</span><span>Stability</span></div></div>
+    <div class="item"><div class="icon">🍽️</div><div class="text"><span>Food</span><span>Access</span></div></div>
+    <div class="item"><div class="icon">🏡</div><div class="text"><span>New Home</span><span>Development</span></div></div>
+    <div class="item"><div class="icon">🤝</div><div class="text"><span>Community</span><span>Partnerships</span></div></div>
+    <div class="item"><div class="icon">🤲</div><div class="text"><span>Volunteer &amp;</span><span>Sponsor</span></div></div>
   </div>
 </section>
 <main>
