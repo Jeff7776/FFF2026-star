@@ -87,155 +87,27 @@ nav a:focus-visible {
    ========================================================= */
 
 .hero-scene {
-  position: relative;
   width: 100%;
+  margin: 0;
+  padding: 0;
   overflow: hidden;
-  background: var(--navy);
-  color: #fff;
-  isolation: isolate;
+  background: #062f50;
 }
 
 .hero-photo {
-  position: relative;
   width: 100%;
-  min-width: 0;
   margin: 0;
   padding: 0;
   line-height: 0;
-  background: var(--navy);
 }
 
 .hero-photo img {
   display: block;
   width: 100%;
-  max-width: 100%;
   height: auto;
+  max-width: 100%;
   object-fit: contain;
-  object-position: center center;
-}
-
-.hero-photo::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: linear-gradient(
-    180deg,
-    rgba(4, 31, 52, .52) 0%,
-    rgba(4, 31, 52, .08) 38%,
-    rgba(4, 31, 52, .18) 62%,
-    rgba(4, 31, 52, .82) 100%
-  );
-  pointer-events: none;
-}
-
-.hero-overlay {
-  position: absolute;
-  z-index: 2;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  gap: clamp(10px, 2vw, 28px);
-  padding:
-    clamp(14px, 2.2vw, 36px)
-    clamp(12px, 3vw, 48px)
-    clamp(16px, 2.8vw, 42px);
-  text-align: center;
-  line-height: 1.15;
-}
-
-.hero-title-block {
-  width: 100%;
-  max-width: 1500px;
-  margin: 0 auto;
-}
-
-.hero-title-block h1 {
-  margin: 0;
-  color: #fff;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.2rem, 4.3vw, 5.2rem);
-  font-weight: 800;
-  line-height: 1.06;
-  letter-spacing: .015em;
-  text-transform: uppercase;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, .8);
-  overflow-wrap: anywhere;
-}
-
-.hero-line {
-  width: 100%;
-  margin-top: auto;
-  padding-top: clamp(14px, 2vw, 30px);
-}
-
-.hero-line h2 {
-  margin: 0;
-  color: #ffe0a0;
-  font-family: Georgia, "Times New Roman", serif;
-  font-style: italic;
-  font-weight: 700;
-  font-size: clamp(1.45rem, 5.1vw, 5.5rem);
-  line-height: 1.05;
-  letter-spacing: -.025em;
-  text-shadow: 0 3px 10px rgba(0, 0, 0, .8);
-  overflow-wrap: anywhere;
-}
-
-.hero-tagline {
-  max-width: 900px;
-  margin: clamp(8px, 1vw, 18px) auto 0;
-  color: #fff;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(.85rem, 2.1vw, 2rem);
-  font-style: italic;
-  font-weight: 700;
-  line-height: 1.25;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, .85);
-  overflow-wrap: anywhere;
-}
-
-.hero-support-line {
-  height: 3px;
-  width: min(62%, 760px);
-  margin: clamp(8px, 1vw, 16px) auto 0;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--gold),
-    transparent
-  );
-  border-radius: 3px;
-}
-
-@media (max-width: 600px) {
-  .hero-overlay {
-    padding: 12px 10px 14px;
-    gap: 8px;
-  }
-
-  .hero-title-block h1 {
-    font-size: clamp(1rem, 5vw, 1.65rem);
-  }
-
-  .hero-line h2 {
-    font-size: clamp(1.2rem, 6vw, 2rem);
-  }
-
-  .hero-tagline {
-    font-size: clamp(.75rem, 3.1vw, 1rem);
-  }
-
-  .hero-photo::after {
-    background: linear-gradient(
-      180deg,
-      rgba(4, 31, 52, .65),
-      rgba(4, 31, 52, .12) 45%,
-      rgba(4, 31, 52, .82)
-    );
-  }
+  object-position: center;
 }
 
 /* =========================================================
