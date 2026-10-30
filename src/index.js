@@ -476,8 +476,8 @@ const pages = {
       <p>Continued stabilization support, follow-up care, and appropriate community resource connections.</p>
     </div>
     <div class="card">
-      <h3>Community Sponsorship</h3>
-      <p>Support the Foundation itself through mission, outreach, and organizational capacity.</p>
+      <h3>Family &amp; Client Sponsorship</h3>
+      <p>Support the families served by the Foundation through direct family assistance and recovery pathways.</p>
     </div>
   </div>
 </section>
@@ -492,17 +492,17 @@ const pages = {
   </div>
 
   <div class="grid">
-    <div class="card" id="community-sponsorship">
-      <h3>Community Sponsorship — Sponsor the Foundation</h3>
-      <p>
-        Support the Foundation itself through community partnership and mission-strengthening giving.
-      </p>
-    </div>
-
     <div class="card" id="family-sponsorship">
       <h3>Family &amp; Client Sponsorship — Sponsor the Client</h3>
       <p>
-        Support the families served by the Foundation through stabilization, resource needs, and homeownership pathways.
+        Support the families served by the Foundation through stabilization, essential needs, and homeownership pathways.
+      </p>
+    </div>
+
+    <div class="card" id="community-sponsorship">
+      <h3>Community Sponsorship — Sponsor the Foundation</h3>
+      <p>
+        Separate organizational giving that helps strengthen the Foundation's mission, outreach, and capacity.
       </p>
     </div>
   </div>
@@ -549,11 +549,11 @@ const pages = {
   <p class="eyebrow">FAMILIES HELPING FAMILIES</p>
   <h2>Together, We Can Bridge the Gap</h2>
   <p>
-    Support the Foundation or help a family move toward stability and a path forward.
+    Support the families served by the Foundation and help a family move toward stability.
   </p>
   <div class="buttons" style="justify-content:center;">
-    <a class="btn gold" href="/volunteer.html#community-sponsorship">SUPPORT THE FOUNDATION</a>
-    <a class="btn outline" href="/volunteer.html#family-sponsorship">SPONSOR A FAMILY</a>
+    <a class="btn gold" href="/volunteer.html#family-sponsorship">SPONSOR THE CLIENTS</a>
+    <a class="btn outline" href="/apply.html">REQUEST ASSISTANCE</a>
   </div>
 </section>
 `
@@ -623,10 +623,9 @@ const pages = {
     </div>
 
     <div class="card">
-      <h3>Community Sponsorship — Sponsor the Foundation</h3>
+      <h3>Family &amp; Client Sponsorship — Sponsor the Client</h3>
       <p>
-        Community partners, businesses, corporations, churches, and civic organizations may support the Foundation itself.
-        This opportunity helps strengthen the Foundation's mission, organizational capacity, and outreach.
+        Support the families served by the Foundation through resource needs, stabilization, and homeownership pathways.
       </p>
     </div>
 
@@ -1284,19 +1283,18 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
   </div>
 
   <div class="grid">
-    <div class="card" id="community-sponsorship">
-      <h3>Community Sponsorship — Sponsor the Foundation</h3>
-      <p>
-        Community partners, businesses, corporations, churches, and civic organizations may support The Family Foreclosure Foundation itself.
-        This opportunity helps strengthen the Foundation's mission, organizational capacity, and outreach.
-      </p>
-    </div>
-
     <div class="card" id="family-sponsorship">
       <h3>Family &amp; Client Sponsorship — Sponsor the Client</h3>
       <p>
-        Donors and organizations may choose to support individuals and families served by the Foundation.
-        Support may be directed toward eligible families' needs, stabilization goals, and pathways toward returning to homeownership.
+        Community partners, businesses, and donors may support the individuals and families served by the Foundation.
+        This pathway focuses on direct family support, stabilization needs, and homeownership goals.
+      </p>
+    </div>
+
+    <div class="card" id="community-sponsorship">
+      <h3>Community Sponsorship — Sponsor the Foundation</h3>
+      <p>
+        Separate organizational giving supports The Family Foreclosure Foundation itself, including mission work, outreach, and organizational capacity.
       </p>
     </div>
 
@@ -1345,8 +1343,8 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
         <select id="vinterest" name="Interest" required>
           <option value="">Choose an option</option>
           <option>Volunteer time or skills</option>
-          <option>Community Sponsorship — Sponsor the Foundation</option>
           <option>Family &amp; Client Sponsorship — Sponsor the Client</option>
+          <option>Community Sponsorship — Sponsor the Foundation</option>
           <option>Bank or financial-institution partnership</option>
           <option>Food, housing, or emergency-needs support</option>
           <option>Employment, training, or education partnership</option>
