@@ -515,7 +515,7 @@ const pages = {
 <section class="hero-scene" aria-label="The Family Foreclosure Foundation">
   <figure class="hero-photo">
     <img
-      src="${HERO}"
+      src="https://raw.githubusercontent.com/Jeff7776/FFF2026-star/main/family_foreclosure_foundation_hero.jpg"
       alt="The Family Foreclosure Foundation — Leaving No Family Left Behind"
       fetchpriority="high"
     >
