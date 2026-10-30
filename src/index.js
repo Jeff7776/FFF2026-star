@@ -468,16 +468,16 @@ const pages = {
       <p>Information about possible surplus proceeds and qualified recovery guidance.</p>
     </div>
     <div class="card">
-      <h3>Community Sponsorship</h3>
-      <p>Support the Foundation itself through organizational giving and community partnership.</p>
-    </div>
-    <div class="card">
       <h3>Down Payment Program</h3>
       <p>Support intended to help eligible families work toward returning to homeownership.</p>
     </div>
     <div class="card">
       <h3>Ongoing Support &amp; Resources</h3>
       <p>Continued stabilization support, follow-up care, and appropriate community resource connections.</p>
+    </div>
+    <div class="card">
+      <h3>Community Sponsorship</h3>
+      <p>Support the Foundation itself through mission, outreach, and organizational capacity.</p>
     </div>
   </div>
 </section>
@@ -495,16 +495,14 @@ const pages = {
     <div class="card" id="community-sponsorship">
       <h3>Community Sponsorship — Sponsor the Foundation</h3>
       <p>
-        Businesses, churches, civic groups, corporations, and community partners may support The Family Foreclosure Foundation itself.
-        This helps strengthen the Foundation's mission, outreach, programs, and organizational capacity.
+        Support the Foundation itself through community partnership and mission-strengthening giving.
       </p>
     </div>
 
     <div class="card" id="family-sponsorship">
       <h3>Family &amp; Client Sponsorship — Sponsor the Client</h3>
       <p>
-        Donors and partners may also support families served by the Foundation. Support may be directed toward eligible families' needs,
-        stabilization goals, and pathways toward returning to homeownership.
+        Support the families served by the Foundation through stabilization, resource needs, and homeownership pathways.
       </p>
     </div>
   </div>
@@ -627,8 +625,8 @@ const pages = {
     <div class="card">
       <h3>Community Sponsorship — Sponsor the Foundation</h3>
       <p>
-        Community partners, businesses, corporations, churches,
-        and civic organizations may support the Foundation itself.
+        Community partners, businesses, corporations, churches, and civic organizations may support the Foundation itself.
+        This opportunity helps strengthen the Foundation's mission, organizational capacity, and outreach.
       </p>
     </div>
 
@@ -1289,19 +1287,16 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     <div class="card" id="community-sponsorship">
       <h3>Community Sponsorship — Sponsor the Foundation</h3>
       <p>
-        Businesses, corporations, churches, foundations, civic organizations,
-        and community partners may support The Family Foreclosure Foundation itself.
-        This helps strengthen organizational capacity, outreach, mission support,
-        and community-wide service delivery.
+        Community partners, businesses, corporations, churches, and civic organizations may support The Family Foreclosure Foundation itself.
+        This opportunity helps strengthen the Foundation's mission, organizational capacity, and outreach.
       </p>
     </div>
 
     <div class="card" id="family-sponsorship">
       <h3>Family &amp; Client Sponsorship — Sponsor the Client</h3>
       <p>
-        Donors and organizations may choose to support individuals and families
-        served by the Foundation. Support may be directed toward eligible families' needs,
-        stabilization goals, and pathways toward returning to homeownership.
+        Donors and organizations may choose to support individuals and families served by the Foundation.
+        Support may be directed toward eligible families' needs, stabilization goals, and pathways toward returning to homeownership.
       </p>
     </div>
 
