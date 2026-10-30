@@ -512,27 +512,13 @@ const pages = {
   "/": [
     "A New Path Forward After Foreclosure",
     `
-<section class="hero-scene" aria-label="The Family Foreclosure Foundation hero">
+<section class="hero-scene" aria-label="The Family Foreclosure Foundation">
   <figure class="hero-photo">
     <img
       src="${HERO}"
-      alt="A family and community gathered together in support"
+      alt="The Family Foreclosure Foundation — Leaving No Family Left Behind"
       fetchpriority="high"
-      decoding="async"
     >
-    <figcaption class="hero-overlay">
-      <div class="hero-title-block">
-        <h1>The Family Foreclosure Foundation</h1>
-      </div>
-
-      <div class="hero-line">
-        <h2>Leaving No Family Behind</h2>
-        <div class="hero-support-line" aria-hidden="true"></div>
-        <p class="hero-tagline">
-          Because Every Family Is Somebody's Whole Entire World!!
-        </p>
-      </div>
-    </figcaption>
   </figure>
 </section>
 
