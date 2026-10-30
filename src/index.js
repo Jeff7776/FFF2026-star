@@ -111,8 +111,8 @@ nav a:focus-visible {
 }
 
 /* =========================================================
-   GLOBAL COMPONENTS
-   ========================================================= */
+    GLOBAL COMPONENTS
+    ========================================================= */
 
 .eyebrow {
   font-size: 11px;
@@ -434,6 +434,84 @@ const pages = {
 
 <section class="content">
   <div class="section-heading">
+    <p class="eyebrow">PROGRAM EXPANSION</p>
+    <h2>Nine Pathways, One Mission</h2>
+    <p>
+      The Foundation continues to focus on post-foreclosure recovery
+      while expanding to reflect a broader community support model.
+    </p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Emergency Food</h3>
+      <p>Food assistance and immediate support for families facing a difficult transition.</p>
+    </div>
+    <div class="card">
+      <h3>Housing Navigation</h3>
+      <p>Resource guidance for safe, stable housing options and appropriate referrals.</p>
+    </div>
+    <div class="card">
+      <h3>Pet Shelter Resources</h3>
+      <p>Support connecting families with pet-related assistance during housing changes.</p>
+    </div>
+    <div class="card">
+      <h3>Job Training &amp; Placement</h3>
+      <p>Career, training, and employment readiness resources designed to strengthen stability.</p>
+    </div>
+    <div class="card">
+      <h3>Financial Education</h3>
+      <p>Tools and guidance for budgeting, financial literacy, and homeownership readiness.</p>
+    </div>
+    <div class="card">
+      <h3>Surplus Asset Recovery</h3>
+      <p>Information about possible surplus proceeds and qualified recovery guidance.</p>
+    </div>
+    <div class="card">
+      <h3>Community Sponsorship</h3>
+      <p>Support the Foundation itself through organizational giving and community partnership.</p>
+    </div>
+    <div class="card">
+      <h3>Down Payment Program</h3>
+      <p>Support intended to help eligible families work toward returning to homeownership.</p>
+    </div>
+    <div class="card">
+      <h3>Ongoing Support &amp; Resources</h3>
+      <p>Continued stabilization support, follow-up care, and appropriate community resource connections.</p>
+    </div>
+  </div>
+</section>
+
+<section class="content soft">
+  <div class="section-heading">
+    <p class="eyebrow">SPONSORSHIP PATHWAYS</p>
+    <h2>Two Separate Ways to Give</h2>
+    <p>
+      The Foundation distinguishes between supporting the organization and supporting the families it serves.
+    </p>
+  </div>
+
+  <div class="grid">
+    <div class="card" id="community-sponsorship">
+      <h3>Community Sponsorship — Sponsor the Foundation</h3>
+      <p>
+        Businesses, churches, civic groups, corporations, and community partners may support The Family Foreclosure Foundation itself.
+        This helps strengthen the Foundation's mission, outreach, programs, and organizational capacity.
+      </p>
+    </div>
+
+    <div class="card" id="family-sponsorship">
+      <h3>Family &amp; Client Sponsorship — Sponsor the Client</h3>
+      <p>
+        Donors and partners may also support families served by the Foundation. Support may be directed toward eligible families' needs,
+        stabilization goals, and pathways toward returning to homeownership.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="content">
+  <div class="section-heading">
     <p class="eyebrow">WHO WE SERVE</p>
     <h2>Every Family Deserves a Path Forward</h2>
     <p>
@@ -473,9 +551,12 @@ const pages = {
   <p class="eyebrow">FAMILIES HELPING FAMILIES</p>
   <h2>Together, We Can Bridge the Gap</h2>
   <p>
-    Connect with the Foundation to explore resources and next steps.
+    Support the Foundation or help a family move toward stability and a path forward.
   </p>
-  <a class="btn gold" href="/apply.html">REQUEST ASSISTANCE</a>
+  <div class="buttons" style="justify-content:center;">
+    <a class="btn gold" href="/volunteer.html#community-sponsorship">SUPPORT THE FOUNDATION</a>
+    <a class="btn outline" href="/volunteer.html#family-sponsorship">SPONSOR A FAMILY</a>
+  </div>
 </section>
 `
   ],
@@ -488,7 +569,8 @@ const pages = {
   <h1>Programs &amp; Services</h1>
   <p>
     Practical resource navigation and community connections for
-    families rebuilding after foreclosure.
+    families rebuilding after foreclosure through nine distinct
+    program categories.
   </p>
 </div>
 
@@ -541,12 +623,35 @@ const pages = {
         foreclosure and connecting with qualified professionals.
       </p>
     </div>
+
+    <div class="card">
+      <h3>Community Sponsorship — Sponsor the Foundation</h3>
+      <p>
+        Community partners, businesses, corporations, churches,
+        and civic organizations may support the Foundation itself.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Down Payment Program</h3>
+      <p>
+        A program focus to help eligible families work toward
+        returning to homeownership through practical next steps.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Ongoing Support &amp; Resources</h3>
+      <p>
+        Continued family stabilization, follow-up support, and
+        healthy connections to community resources and partnerships.
+      </p>
+    </div>
   </div>
 
   <div class="notice">
-    Services provided by outside organizations depend on their
-    eligibility requirements, capacity, and availability. The
-    Foundation does not guarantee placement or a particular outcome.
+    The Foundation maintains a clear distinction between support for the organization and support for families served by the Foundation.
+    Services provided by outside organizations depend on their eligibility requirements, capacity, and availability. The Foundation does not guarantee placement or a particular outcome.
   </div>
 </section>
 `
@@ -560,7 +665,8 @@ const pages = {
   <h1>Who We Serve</h1>
   <p>
     Individuals and families working to rebuild after residential
-    or commercial foreclosure.
+    or commercial foreclosure, including through stabilization,
+    resource support, and pathways toward homeownership.
   </p>
 </div>
 
@@ -619,7 +725,9 @@ const pages = {
     <strong>Post-foreclosure focus:</strong> We are not a
     pre-foreclosure prevention service. If you are currently facing
     foreclosure, contact a HUD-approved housing counselor or legal
-    aid organization for guidance.
+    aid organization for guidance. Our support model may include
+    stabilization resources, down payment readiness, and ongoing
+    community support as appropriate.
   </div>
 </section>
 `
@@ -632,8 +740,8 @@ const pages = {
   <p class="eyebrow">RESOURCES &amp; FAQ</p>
   <h1>Resources &amp; Frequently Asked Questions</h1>
   <p>
-    General information about foreclosure recovery and the
-    Foundation's approach.
+    General information about foreclosure recovery, sponsorship,
+    and the Foundation's approach to family stabilization.
   </p>
 </div>
 
@@ -661,7 +769,30 @@ const pages = {
     <p>
       Resources may include food assistance, housing navigation,
       pet shelter resources, job training, employment placement,
-      financial education, and community referrals.
+      financial education, down payment guidance, and community referrals.
+    </p>
+  </div>
+
+  <div class="faq">
+    <h3>What is the Down Payment Program?</h3>
+    <p>
+      The Down Payment Program is part of the Foundation's mission to help eligible families work toward returning to homeownership.
+      The program is designed to support a path forward and does not promise funding, eligibility, or guaranteed assistance.
+    </p>
+  </div>
+
+  <div class="faq">
+    <h3>What is Ongoing Support &amp; Resources?</h3>
+    <p>
+      This area reflects the Foundation's commitment to continued family stabilization, follow-up support, and appropriate connections to community resources and partnerships.
+    </p>
+  </div>
+
+  <div class="faq">
+    <h3>What is the difference between sponsorship pathways?</h3>
+    <p>
+      Community Sponsorship supports The Family Foreclosure Foundation itself. Family &amp; Client Sponsorship supports eligible families served by the Foundation.
+      These are separate paths and should not be treated as the same fundraising opportunity.
     </p>
   </div>
 
@@ -743,7 +874,7 @@ const pages = {
 <div class="page-hero">
   <p class="eyebrow">ABOUT US</p>
   <h1>About the Foundation</h1>
-  <p>Helping families and individuals rebuild after foreclosure.</p>
+  <p>Helping families and individuals rebuild after foreclosure through a consistent mission of stabilization, recovery, and community partnership.</p>
 </div>
 
 <section class="content">
@@ -753,7 +884,8 @@ const pages = {
       The Family Foreclosure Foundation is dedicated to helping
       families and individuals who have experienced residential
       or commercial foreclosure. We believe stability can return
-      with dignity and practical support.
+      with dignity, practical support, and a realistic path toward
+      homeownership where appropriate.
     </p>
   </div>
 
@@ -763,7 +895,8 @@ const pages = {
       We help connect families with emergency food and housing
       resources, pet shelter resources, job training and placement,
       financial education, second-chance housing information,
-      and recovery guidance.
+      surplus recovery guidance, down payment readiness support,
+      and ongoing stabilization resources.
     </p>
   </div>
 
@@ -780,15 +913,17 @@ const pages = {
     <h3>How We Are Funded</h3>
     <p>
       The Foundation seeks support through donations, grants,
-      and community partnerships. Any services offered by partner
-      organizations remain subject to their own rules and availability.
+      and community partnerships. Community Sponsorship supports
+      the Foundation itself, while Family &amp; Client Sponsorship
+      supports families served by the Foundation. Any services offered
+      by partner organizations remain subject to their own rules and availability.
     </p>
   </div>
 
   <div class="notice">
     Our work centers on family stabilization and resource
     navigation. We do not promise recovery of funds, housing
-    placement, employment, or homeownership.
+    placement, employment, homeownership, or guaranteed assistance.
   </div>
 </section>
 `
@@ -802,7 +937,8 @@ const pages = {
   <h1>Request Assistance</h1>
   <p>
     If foreclosure has affected your family or property, you may
-    use this form to tell us about your situation.
+    use this form to tell us about your situation. We can help
+    explore resource options, stabilization support, and next steps.
   </p>
 </div>
 
@@ -898,6 +1034,11 @@ const pages = {
         <label class="choice">
           <input type="checkbox" name="Resources" value="Employment support">
           Employment support
+        </label>
+
+        <label class="choice">
+          <input type="checkbox" name="Resources" value="Down payment program">
+          Down payment program
         </label>
 
         <label class="choice">
@@ -1130,10 +1271,8 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
   <h1>Volunteer &amp; Community Sponsors</h1>
   <p>
     Help build a stronger bridge for families rebuilding after
-    foreclosure. The Foundation connects families with community
-    partners, corporate sponsors, major banks, and private businesses.
-    Families receiving services are never asked to sponsor or pay
-    for another family.
+    foreclosure. The Foundation distinguishes clearly between
+    support for the mission and support for the families served.
   </p>
 </div>
 
@@ -1147,6 +1286,25 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
   </div>
 
   <div class="grid">
+    <div class="card" id="community-sponsorship">
+      <h3>Community Sponsorship — Sponsor the Foundation</h3>
+      <p>
+        Businesses, corporations, churches, foundations, civic organizations,
+        and community partners may support The Family Foreclosure Foundation itself.
+        This helps strengthen organizational capacity, outreach, mission support,
+        and community-wide service delivery.
+      </p>
+    </div>
+
+    <div class="card" id="family-sponsorship">
+      <h3>Family &amp; Client Sponsorship — Sponsor the Client</h3>
+      <p>
+        Donors and organizations may choose to support individuals and families
+        served by the Foundation. Support may be directed toward eligible families' needs,
+        stabilization goals, and pathways toward returning to homeownership.
+      </p>
+    </div>
+
     <div class="card">
       <h3>Volunteer Your Skills</h3>
       <p>
@@ -1155,33 +1313,11 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
         skills that match your availability.
       </p>
     </div>
-
-    <div class="card">
-      <h3>Become a Community Sponsor</h3>
-      <p>
-        Community groups, companies, banks, retailers, and private
-        businesses can explore support for emergency needs, housing
-        stabilization, food access, employment readiness, and
-        family rebuilding.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Build the Bridge Back Home</h3>
-      <p>
-        As families regain stability, we encourage them to strengthen
-        their own households and communities in ways they freely
-        choose. Receiving help never depends on volunteering,
-        donating, or repaying the Foundation.
-      </p>
-    </div>
   </div>
 
   <div class="notice">
-    <strong>Free to families:</strong> The Foundation's
-    resource-navigation support is provided at no cost to the
-    clients we serve. Partner services, eligibility, and availability
-    may vary. We do not promise a specific outcome.
+    <strong>Separate pathways:</strong> The Foundation keeps Community Sponsorship and Family &amp; Client Sponsorship distinct.
+    Each opportunity has its own purpose, messaging, and inquiry process. No specific outcome, tax benefit, or guaranteed assistance is implied.
   </div>
 
   <form class="form" id="volunteerForm">
@@ -1214,7 +1350,8 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
         <select id="vinterest" name="Interest" required>
           <option value="">Choose an option</option>
           <option>Volunteer time or skills</option>
-          <option>Community or corporate sponsorship</option>
+          <option>Community Sponsorship — Sponsor the Foundation</option>
+          <option>Family &amp; Client Sponsorship — Sponsor the Client</option>
           <option>Bank or financial-institution partnership</option>
           <option>Food, housing, or emergency-needs support</option>
           <option>Employment, training, or education partnership</option>
@@ -1376,7 +1513,7 @@ function render(title, body) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#062f50">
-<meta name="description" content="The Family Foreclosure Foundation connects families affected by foreclosure with practical resource navigation, community partnerships, and possible recovery information.">
+<meta name="description" content="The Family Foreclosure Foundation connects families affected by foreclosure with practical resource navigation, community partnerships, and possible recovery options.">
 <title>${escapeHtml(title)} | ${BRAND}</title>
 <style>${CSS}</style>
 </head>
