@@ -2,6 +2,7 @@ const BRAND = "The Family Foreclosure Foundation";
 const EMAIL = "Info@TheFamilyForeclosureFoundation.Org";
 const SITE = "https://thefamilyforeclosurefoundation.org";
 const HERO = "https://raw.githubusercontent.com/Jeff7776/FFF2026-star/main/family_foreclosure_foundation_hero.jpg";
+const GOOGLE_FORM_URL = "PASTE_GOOGLE_FORM_URL_HERE";
 
 const CSS = `
 :root {
@@ -1362,7 +1363,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
         ></textarea>
       </div>
 
-      <button class="btn gold" type="submit">PREPARE EMAIL INQUIRY</button>
+      <button class="btn gold" type="submit">OPEN VOLUNTEER FORM</button>
       <p id="volunteerStatus" role="status" aria-live="polite"></p>
     </fieldset>
   </form>
@@ -1377,23 +1378,16 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
 document.getElementById("volunteerForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
-  const data = new FormData(this);
-
-  const body = encodeURIComponent(
-    Array.from(data.entries())
-      .map(([key, value]) => key + ": " + value)
-      .join("\n\n")
-  );
-
-  const subject = encodeURIComponent(
-    "Volunteer or Community Sponsor Inquiry"
-  );
+  if (!GOOGLE_FORM_URL || GOOGLE_FORM_URL === "PASTE_GOOGLE_FORM_URL_HERE") {
+    document.getElementById("volunteerStatus").textContent =
+      "Google Form URL is not configured yet. Add your Google Form link to the site code.";
+    return;
+  }
 
   document.getElementById("volunteerStatus").textContent =
-    "Your email application should open. Review it and press Send to submit your inquiry.";
+    "Opening the volunteer form...";
 
-  window.location.href =
-    "mailto:${EMAIL}?subject=" + subject + "&body=" + body;
+  window.location.href = GOOGLE_FORM_URL;
 });
 </script>
 `
@@ -1506,7 +1500,7 @@ function render(title, body) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#062f50">
-<meta name="description" content="The Family Foreclosure Foundation connects families affected by foreclosure with practical resource navigation, community partnerships, and possible recovery options.">
+<meta name="description" content="The Family Foreclosure Foundation connects families affected by foreclosure with practical resource navigation, community partnerships, and possible recovery opportunities.">
 <title>${escapeHtml(title)} | ${BRAND}</title>
 <style>${CSS}</style>
 </head>
