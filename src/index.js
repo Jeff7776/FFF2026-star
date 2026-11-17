@@ -2,7 +2,7 @@ const BRAND = "The Family Foreclosure Foundation";
 const EMAIL = "Info@TheFamilyForeclosureFoundation.Org";
 const SITE = "https://thefamilyforeclosurefoundation.org";
 const HERO = "https://raw.githubusercontent.com/Jeff7776/FFF2026-star/main/family_foreclosure_foundation_hero.jpg";
-const GOOGLE_FORM_URL = "PASTE_GOOGLE_FORM_URL_HERE";
+const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfHdN-XTJFGQqfpt-qY5x2-wJijNpnelrdXvb0ksv2q3aJisQ/viewform";
 
 const CSS = `
 :root {
